@@ -7,12 +7,15 @@
 //
 
 #import "FLChallenge.h"
+#import "FLChallengeUpdate.h"
+#import "FLMotivator.h"
 
 
 @implementation FLChallenge
 
 @dynamic title;
 @dynamic duration;
+@dynamic startDate;
 @dynamic updates;
 @dynamic motivators;
 

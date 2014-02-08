@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "FLGenericViewController.h"
 
-@interface FLViewController : FLGenericViewController <UITableViewDataSource, UITableViewDelegate, NSFetchedResultsControllerDelegate>
+@interface FLCurrentChallengeViewController : FLGenericViewController <UITableViewDataSource, UITableViewDelegate, NSFetchedResultsControllerDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 

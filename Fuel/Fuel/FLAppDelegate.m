@@ -20,6 +20,11 @@
     // Override point for customization after application launch.
     
     [[FLGlobalHelper defaultHelper]defaultSetup];
+    
+    [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
+    [[UINavigationBar appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
+
+    
     return YES;
 }
 

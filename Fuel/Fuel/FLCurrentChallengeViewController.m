@@ -6,16 +6,16 @@
 //  Copyright (c) 2014 Fuel. All rights reserved.
 //
 
-#import "FLViewController.h"
+#import "FLCurrentChallengeViewController.h"
 #import "FLAppDelegate.h"
 
 #define CELL_HEIGHT 110
 
-@interface FLViewController ()
+@interface FLCurrentChallengeViewController ()
 @property (nonatomic) NSFetchedResultsController * fetchedResultsController;
 @end
 
-@implementation FLViewController
+@implementation FLCurrentChallengeViewController
 
 - (void)viewDidLoad
 {
@@ -34,6 +34,8 @@
         NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
         abort();
     }
+    
+    [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"Navigation_TopMenuBar"] forBarMetrics:UIBarMetricsDefault];
 }
 
 - (void)didReceiveMemoryWarning
@@ -51,8 +53,6 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    
-    return 3;
     NSInteger numberOfRows = 0;
     
     if ([[self.fetchedResultsController sections] count] > 0) {
@@ -67,6 +67,7 @@
     static NSString * identifier = @"ChallengeCell";
     
     UITableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:identifier];
+    
     
     
     return cell;

@@ -34,8 +34,21 @@ static FLGlobalHelper * defaultGlobalHelper = nil;
     [self deleteAllChallenges];
     
     FLChallenge * challenege = [NSEntityDescription insertNewObjectForEntityForName:@"FLChallenge" inManagedObjectContext:self.managedObjectContext];
+    challenege.startDate = [NSDate new];
+    challenege.duration = @(60 * 60 * 24 * 15);
+    challenege.title = @"Finish Hackathon";
+    
     FLChallenge * challenege1 = [NSEntityDescription insertNewObjectForEntityForName:@"FLChallenge" inManagedObjectContext:self.managedObjectContext];
+    
+    challenege1.duration = @(60 * 60 * 24 * 20);
+    challenege1.startDate = [NSDate new];
+    challenege.title = @"Mount Everest";
+    
     FLChallenge * challenege2 = [NSEntityDescription insertNewObjectForEntityForName:@"FLChallenge" inManagedObjectContext:self.managedObjectContext];
+    challenege2.startDate = [NSDate new];
+    challenege2.duration = @(60 * 60 * 24 * 30);
+    challenege2.title = @"Finish Degree";
+    
     
     NSError * error;
     [self.managedObjectContext save:&error];
