@@ -21,8 +21,12 @@
     
 //    [UILabel appearance]setFont:[UIFont fontNamesForFamilyName:@"]
     
+    
+    
+    
     return YES;
 }
+
 							
 - (void)applicationWillResignActive:(UIApplication *)application
 {

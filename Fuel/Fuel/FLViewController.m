@@ -24,6 +24,7 @@
     
     
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    self.tableView.backgroundColor = [UIColor colorWithHue:0 saturation:0 brightness:96 alpha:1];
 }
 
 - (void)didReceiveMemoryWarning
@@ -41,6 +42,8 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
+    
+    return 3;
     NSInteger numberOfRows = 0;
     
     if ([[self.fetchedResultsController sections] count] > 0) {
@@ -65,5 +68,34 @@
     return CELL_HEIGHT;
 }
 
+
+#pragma mark - Fetched results Controller
+
+-(NSFetchedResultsController *) fetchedGroupResultsController
+{
+    if (!_fetchedResultsController) {
+        
+        //Create fetch Request
+        NSFetchRequest * fetchRequest = [[NSFetchRequest alloc]init];
+        
+        NSEntityDescription * entity = [NSEntityDescription entityForName:@"FLChallenge" inManagedObjectContext:self.managedObjectContext];
+        [fetchRequest setEntity:entity];
+        
+        //Set up initial sorting
+//        NSArray * descriptors = @[[[NSSortDescriptor alloc]initWithKey:@"groupName" ascending:YES]];
+        
+        fetchRequest.fetchBatchSize = 20;
+//        fetchRequest.sortDescriptors = descriptors;
+        
+        
+        //Make the fetch result controller
+        NSFetchedResultsController * newFetchedResultsController = [[NSFetchedResultsController alloc]initWithFetchRequest:fetchRequest managedObjectContext:self.managedObjectContext sectionNameKeyPath:nil cacheName:nil];
+        
+        //Set delegate
+        newFetchedResultsController.delegate = self;
+        _fetchedResultsController= newFetchedResultsController;
+    }
+    return _fetchedResultsController;
+}
 
 @end

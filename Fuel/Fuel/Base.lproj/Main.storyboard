@@ -37,27 +37,34 @@
                                                     </constraints>
                                                 </view>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Finish Hacakthon" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VPi-vX-neY">
-                                                    <rect key="frame" x="33" y="34" width="134" height="24"/>
+                                                    <rect key="frame" x="33" y="34" width="158" height="28"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="20"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZTx-xv-cCP">
-                                                    <rect key="frame" x="33" y="66" width="31" height="15"/>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="53 days left" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZTx-xv-cCP">
+                                                    <rect key="frame" x="67" y="69" width="80" height="18"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <color key="textColor" red="0.75497359037399292" green="0.77878028154373169" blue="0.81490927934646606" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Timer-Icon" translatesAutoresizingMaskIntoConstraints="NO" id="Jzj-Rk-dJS">
+                                                    <rect key="frame" x="33" y="65" width="26" height="25"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstItem="ZTx-xv-cCP" firstAttribute="leading" secondItem="Jzj-Rk-dJS" secondAttribute="trailing" constant="8" id="CD2-Aj-LLN"/>
                                                 <constraint firstItem="VPi-vX-neY" firstAttribute="leading" secondItem="aAg-U6-DEM" secondAttribute="leading" constant="33" id="Jwa-Bt-fEa"/>
+                                                <constraint firstItem="Jzj-Rk-dJS" firstAttribute="centerY" secondItem="ZTx-xv-cCP" secondAttribute="centerY" id="Ki7-x9-AbV"/>
+                                                <constraint firstItem="Jzj-Rk-dJS" firstAttribute="top" secondItem="VPi-vX-neY" secondAttribute="bottom" constant="3" id="LXl-Lg-Qnl"/>
                                                 <constraint firstItem="70T-XA-6gT" firstAttribute="top" secondItem="aAg-U6-DEM" secondAttribute="top" constant="-11.5" id="La0-n8-tK0"/>
-                                                <constraint firstItem="VPi-vX-neY" firstAttribute="leading" secondItem="ZTx-xv-cCP" secondAttribute="leading" id="Q5o-CT-eTV"/>
                                                 <constraint firstItem="70T-XA-6gT" firstAttribute="leading" secondItem="aAg-U6-DEM" secondAttribute="leading" id="hE9-UM-cBc"/>
-                                                <constraint firstItem="ZTx-xv-cCP" firstAttribute="top" secondItem="VPi-vX-neY" secondAttribute="bottom" constant="8" symbolic="YES" id="ikb-Pl-p8i"/>
                                                 <constraint firstAttribute="trailing" secondItem="70T-XA-6gT" secondAttribute="trailing" id="nF7-fi-SOM"/>
                                                 <constraint firstItem="VPi-vX-neY" firstAttribute="top" secondItem="70T-XA-6gT" secondAttribute="bottom" constant="14" id="uQK-7L-aYf"/>
+                                                <constraint firstItem="Jzj-Rk-dJS" firstAttribute="leading" secondItem="VPi-vX-neY" secondAttribute="leading" id="ufm-la-nmc"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -193,6 +200,9 @@
             <point key="canvasLocation" x="531" y="142"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Timer-Icon" width="26" height="25"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
