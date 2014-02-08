@@ -72,6 +72,7 @@
     FLChallenge * challenge = [self.fetchedResultsController objectAtIndexPath:indexPath];
     
     cell.titleLabel.text = challenge.title;
+    cell.dayLeftLabel.text = challenge.dayLeftString;
     
     return cell;
 }

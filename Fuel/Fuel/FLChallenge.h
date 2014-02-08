@@ -14,8 +14,8 @@
 @interface FLChallenge : NSManagedObject
 
 @property (nonatomic, retain) NSString * title;
-@property (nonatomic, retain) NSNumber * duration;
 @property (nonatomic, retain) NSDate * startDate;
+@property (nonatomic, retain) NSDate * endDate;
 @property (nonatomic, retain) NSSet *updates;
 @property (nonatomic, retain) NSSet *motivators;
 @end
