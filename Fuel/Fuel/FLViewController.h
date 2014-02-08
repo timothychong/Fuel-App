@@ -7,8 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "FLGenericViewController.h"
 
-@interface FLViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
+@interface FLViewController : FLGenericViewController <UITableViewDataSource, UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
+
+
+@property (nonatomic) NSManagedObjectContext * managedObjectContext;
+
 
 @end

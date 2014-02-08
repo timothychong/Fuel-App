@@ -7,12 +7,11 @@
 //
 
 #import "FLViewController.h"
-
+#import "FLAppDelegate.h"
 
 #define CELL_HEIGHT 110
 
 @interface FLViewController ()
-
 @end
 
 @implementation FLViewController
@@ -21,6 +20,10 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    
+    //Set up managed object context
+    FLAppDelegate * mainAppDelegate = (FLAppDelegate *) [[UIApplication sharedApplication] delegate];
+    self.managedObjectContext = mainAppDelegate.managedObjectContext;
     
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
 }

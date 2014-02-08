@@ -14,6 +14,9 @@
 		9D4FACC418A6BC7A00A49636 /* FLChallenge.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D4FACC318A6BC7A00A49636 /* FLChallenge.m */; };
 		9D4FACC718A6BC7A00A49636 /* FLChallengeUpdate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D4FACC618A6BC7A00A49636 /* FLChallengeUpdate.m */; };
 		9D4FACCA18A6BC7A00A49636 /* FLMotivator.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D4FACC918A6BC7A00A49636 /* FLMotivator.m */; };
+		9D4FACCD18A6CBC300A49636 /* FLGenericViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D4FACCC18A6CBC300A49636 /* FLGenericViewController.m */; };
+		9D4FACCF18A6CBF600A49636 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D4FACCE18A6CBF600A49636 /* CoreData.framework */; };
+		9D4FACD118A6D0F500A49636 /* Avenir Next.ttc in Resources */ = {isa = PBXBuildFile; fileRef = 9D4FACD018A6D0F500A49636 /* Avenir Next.ttc */; };
 		9DFECF0118A5DDFC00BD49DC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DFECF0018A5DDFC00BD49DC /* Foundation.framework */; };
 		9DFECF0318A5DDFC00BD49DC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DFECF0218A5DDFC00BD49DC /* CoreGraphics.framework */; };
 		9DFECF0518A5DDFC00BD49DC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DFECF0418A5DDFC00BD49DC /* UIKit.framework */; };
@@ -56,6 +59,10 @@
 		9D4FACC618A6BC7A00A49636 /* FLChallengeUpdate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLChallengeUpdate.m; sourceTree = "<group>"; };
 		9D4FACC818A6BC7A00A49636 /* FLMotivator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLMotivator.h; sourceTree = "<group>"; };
 		9D4FACC918A6BC7A00A49636 /* FLMotivator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLMotivator.m; sourceTree = "<group>"; };
+		9D4FACCB18A6CBC300A49636 /* FLGenericViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLGenericViewController.h; sourceTree = "<group>"; };
+		9D4FACCC18A6CBC300A49636 /* FLGenericViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLGenericViewController.m; sourceTree = "<group>"; };
+		9D4FACCE18A6CBF600A49636 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		9D4FACD018A6D0F500A49636 /* Avenir Next.ttc */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Avenir Next.ttc"; sourceTree = "<group>"; };
 		9DFECEFD18A5DDFC00BD49DC /* Fuel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fuel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9DFECF0018A5DDFC00BD49DC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		9DFECF0218A5DDFC00BD49DC /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -83,6 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9D4FACCF18A6CBF600A49636 /* CoreData.framework in Frameworks */,
 				9DFECF0318A5DDFC00BD49DC /* CoreGraphics.framework in Frameworks */,
 				9DFECF0518A5DDFC00BD49DC /* UIKit.framework in Frameworks */,
 				9DFECF0118A5DDFC00BD49DC /* Foundation.framework in Frameworks */,
@@ -146,6 +154,7 @@
 		9DFECEFF18A5DDFC00BD49DC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9D4FACCE18A6CBF600A49636 /* CoreData.framework */,
 				9DFECF0018A5DDFC00BD49DC /* Foundation.framework */,
 				9DFECF0218A5DDFC00BD49DC /* CoreGraphics.framework */,
 				9DFECF0418A5DDFC00BD49DC /* UIKit.framework */,
@@ -160,6 +169,8 @@
 			children = (
 				9DFECF0F18A5DDFC00BD49DC /* FLAppDelegate.h */,
 				9DFECF1018A5DDFC00BD49DC /* FLAppDelegate.m */,
+				9D4FACCB18A6CBC300A49636 /* FLGenericViewController.h */,
+				9D4FACCC18A6CBC300A49636 /* FLGenericViewController.m */,
 				9DFECF1218A5DDFC00BD49DC /* Main.storyboard */,
 				9DFECF1518A5DDFC00BD49DC /* FLViewController.h */,
 				9DFECF1618A5DDFC00BD49DC /* FLViewController.m */,
@@ -173,6 +184,7 @@
 		9DFECF0718A5DDFC00BD49DC /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				9D4FACD018A6D0F500A49636 /* Avenir Next.ttc */,
 				9DFECF0818A5DDFC00BD49DC /* Fuel-Info.plist */,
 				9DFECF0918A5DDFC00BD49DC /* InfoPlist.strings */,
 				9DFECF0C18A5DDFC00BD49DC /* main.m */,
@@ -278,6 +290,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9D4FACD118A6D0F500A49636 /* Avenir Next.ttc in Resources */,
 				9DFECF1918A5DDFC00BD49DC /* Images.xcassets in Resources */,
 				9DFECF0B18A5DDFC00BD49DC /* InfoPlist.strings in Resources */,
 				9DFECF1418A5DDFC00BD49DC /* Main.storyboard in Resources */,
@@ -337,6 +350,7 @@
 				9D4FACC118A6BC7A00A49636 /* FLMotivatorVideo.m in Sources */,
 				9D4FACBE18A6BC7A00A49636 /* FLMotivatorImage.m in Sources */,
 				9DFECF1118A5DDFC00BD49DC /* FLAppDelegate.m in Sources */,
+				9D4FACCD18A6CBC300A49636 /* FLGenericViewController.m in Sources */,
 				9DFECF0D18A5DDFC00BD49DC /* main.m in Sources */,
 				9D4FACC418A6BC7A00A49636 /* FLChallenge.m in Sources */,
 				9D4FACCA18A6BC7A00A49636 /* FLMotivator.m in Sources */,
