@@ -140,9 +140,16 @@
                                     <action selector="displayImage:" destination="Kq9-yb-eWe" eventType="touchUpInside" id="NLL-Nn-eu1"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="whV-J5-phJ">
+                                <rect key="frame" x="50" y="375" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="imageView" destination="whV-J5-phJ" id="597-qJ-YWT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jjc-AB-dXr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

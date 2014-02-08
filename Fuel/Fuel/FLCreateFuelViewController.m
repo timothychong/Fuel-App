@@ -13,6 +13,8 @@
 
 @interface FLCreateFuelViewController () <UINavigationControllerDelegate, UIImagePickerControllerDelegate>
 
+@property (weak, nonatomic) IBOutlet UIImageView *imageView;
+
 @end
 
 @implementation FLCreateFuelViewController
@@ -25,6 +27,20 @@
 - (IBAction)playVideo:(UIButton *)sender
 {
     
+    NSString *FileName=[NSString stringWithFormat:@"movie1.png"];
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentsDirectory = [paths objectAtIndex:0];
+    NSString *tempPath = [documentsDirectory stringByAppendingPathComponent:FileName];
+    
+    MPMoviePlayerController *myPlayer = [[MPMoviePlayerController alloc] init];
+    myPlayer.shouldAutoplay = YES;
+    myPlayer.repeatMode = MPMovieRepeatModeOne;
+    myPlayer.fullscreen = YES;
+    myPlayer.movieSourceType = MPMovieSourceTypeFile;
+    myPlayer.scalingMode = MPMovieScalingModeAspectFit;
+    myPlayer.contentURL =[NSURL fileURLWithPath: tempPath];
+    [self.view addSubview:myPlayer.view];
+    [myPlayer play];
 }
 
 - (IBAction)takeImage:(UIButton *)sender
@@ -53,6 +69,7 @@
     NSURL *targetURL = [NSURL fileURLWithPath:path];
     NSData *returnData=[NSData dataWithContentsOfURL:targetURL];
     UIImage *imagemain=[UIImage imageWithData: returnData];
+    [self.imageView setImage: imagemain];
 }
 
 -(BOOL)startCameraControllerFromViewController:(UIViewController*)controller
