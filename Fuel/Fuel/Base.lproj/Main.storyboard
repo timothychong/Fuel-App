@@ -4,6 +4,24 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
     </dependencies>
     <scenes>
+        <!--View Controller-->
+        <scene sceneID="UZl-DA-xJQ">
+            <objects>
+                <viewController id="ieT-bn-Qnd" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="V0k-en-w3X"/>
+                        <viewControllerLayoutGuide type="bottom" id="wzB-GE-Ns0"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Lxz-An-NpB">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Lbz-xY-unU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1297" y="-173"/>
+        </scene>
         <!--Current Challenge View Controller - Fuel-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
@@ -22,7 +40,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ChallengeCell" rowHeight="110" id="ChO-gl-nVx" customClass="FLChallengeCell">
-                                        <rect key="frame" x="0.0" y="22" width="320" height="110"/>
+                                        <rect key="frame" x="0.0" y="86" width="320" height="110"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ChO-gl-nVx" id="aAg-U6-DEM">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="109"/>

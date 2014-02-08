@@ -18,22 +18,9 @@
 
 - (NSString *)dayLeftString
 {
-    NSDate * endDate = self.endDate;
-    
-    NSTimeInterval interval = [endDate timeIntervalSinceNow];
-    
-    if (interval > 60 * 60 * 24) {
-        return [NSString stringWithFormat:@"%d days left", (int) (interval / 60 / 60 / 24)];
-    }else if (interval > 60 * 60){
-        return [NSString stringWithFormat:@"%d hours left", (int) (interval / 60 / 60)];
-    }else
-        return [NSString stringWithFormat:@"%d minutes left", (int) (interval / 60)];
-}
+    NSTimeInterval interval = [self.endDate timeIntervalSinceDate:self.startDate];
 
-
--(NSDate *)endDate
-{
-    return [self.startDate dateByAddingSecond:self.duration.intValue];
+    return [NSString stringWithFormat:@"%d days left", (int) (interval / 60 / 60 / 24)];
 }
 
 @end

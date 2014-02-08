@@ -17,6 +17,4 @@
 
 -(NSString *) dayLeftString;
 
--(NSDate *) endDate;
-
 @end
