@@ -7,10 +7,9 @@
 //
 
 #import "FLGenericViewController.h"
+#import "FLAppDelegate.h"
 
 @interface FLGenericViewController ()
-
-@property (nonatomic) NSManagedObjectContext * managedObjectContext;
 
 @end
 
@@ -29,6 +28,10 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    
+    //Set up managed object context
+    FLAppDelegate * mainAppDelegate = (FLAppDelegate *) [[UIApplication sharedApplication] delegate];
+    self.managedObjectContext = mainAppDelegate.managedObjectContext;
 }
 
 - (void)didReceiveMemoryWarning

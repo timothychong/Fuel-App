@@ -1,16 +1,19 @@
 PODS:
+  - LDProgressView (1.2)
   - Masonry (0.4.0)
   - NSDate+Calendar (0.0.2)
   - RegExCategories (1.0)
   - UIColor-Utilities (1.0.1)
 
 DEPENDENCIES:
+  - LDProgressView
   - Masonry
   - NSDate+Calendar
   - RegExCategories
   - UIColor-Utilities (~> 1.0.1)
 
 SPEC CHECKSUMS:
+  LDProgressView: 26b07fcf00eb066b90f273590955fe8fe27812bd
   Masonry: d673617c9cbc24aaea90fba20b10e47fd9970a39
   NSDate+Calendar: 3bc746ae54cbb5e576310a683897ef8248e5736f
   RegExCategories: 4251b5b17ed9d0e16229652ff8539c131365e218

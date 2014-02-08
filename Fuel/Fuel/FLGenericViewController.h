@@ -11,4 +11,5 @@
 
 @interface FLGenericViewController : UIViewController
 
+@property (nonatomic) NSManagedObjectContext * managedObjectContext;
 @end
