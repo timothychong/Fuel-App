@@ -81,10 +81,10 @@
             </objects>
             <point key="canvasLocation" x="895" y="142"/>
         </scene>
-        <!--View Controller-->
+        <!--Create Fuel View Controller-->
         <scene sceneID="9sE-cE-0Q5">
             <objects>
-                <viewController id="Kq9-yb-eWe" sceneMemberID="viewController">
+                <viewController id="Kq9-yb-eWe" customClass="FLCreateFuelViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="8ej-jJ-IaU"/>
                         <viewControllerLayoutGuide type="bottom" id="pUS-cU-9ml"/>
@@ -94,11 +94,14 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QQY-wK-6Qc">
-                                <rect key="frame" x="137" y="120" width="74" height="30"/>
+                                <rect key="frame" x="137" y="120" width="78" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Edit Image">
+                                <state key="normal" title="Take Image">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="takeImage:" destination="Kq9-yb-eWe" eventType="touchUpInside" id="MIC-1Y-ylB"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ATN-HO-v0B">
                                 <rect key="frame" x="137" y="171" width="86" height="30"/>
@@ -108,18 +111,34 @@
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Eo-r3-EcJ">
-                                <rect key="frame" x="145" y="244" width="70" height="30"/>
+                                <rect key="frame" x="145" y="244" width="75" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Edit Video">
+                                <state key="normal" title="Take Video">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="recordVideo:" destination="Kq9-yb-eWe" eventType="touchUpInside" id="PfK-Zd-cuz"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lXO-0H-MQO">
-                                <rect key="frame" x="145" y="326" width="46" height="30"/>
+                                <rect key="frame" x="141" y="287" width="82" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button">
+                                <state key="normal" title="Show Video">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="playVideo:" destination="Kq9-yb-eWe" eventType="touchUpInside" id="piD-PZ-0Th"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="okY-lQ-af7">
+                                <rect key="frame" x="137" y="171" width="86" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Show Image">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="displayImage:" destination="Kq9-yb-eWe" eventType="touchUpInside" id="NLL-Nn-eu1"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
