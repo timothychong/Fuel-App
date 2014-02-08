@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="3401" systemVersion="13B42" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="FLChallenge" representedClassName="FLChallenge" syncable="YES">
+        <attribute name="duration" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="motivators" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="FLMotivator" inverseName="challenge" inverseEntity="FLMotivator" syncable="YES"/>
+        <relationship name="updates" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="FLChallengeUpdate" inverseName="challenge" inverseEntity="FLChallengeUpdate" syncable="YES"/>
+    </entity>
+    <entity name="FLChallengeUpdate" representedClassName="FLChallengeUpdate" syncable="YES">
+        <attribute name="label" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="challenge" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="FLChallenge" inverseName="updates" inverseEntity="FLChallenge" syncable="YES"/>
+    </entity>
+    <entity name="FLMotivator" representedClassName="FLMotivator" syncable="YES">
+        <relationship name="challenge" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="FLChallenge" inverseName="motivators" inverseEntity="FLChallenge" syncable="YES"/>
+    </entity>
+    <entity name="FLMotivatorImage" representedClassName="FLMotivatorImage" parentEntity="FLMotivator" syncable="YES"/>
+    <entity name="FLMotivatorText" representedClassName="FLMotivatorText" parentEntity="FLMotivator" syncable="YES">
+        <attribute name="text" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="FLMotivatorVideo" representedClassName="FLMotivatorVideo" parentEntity="FLMotivator" syncable="YES"/>
+    <elements>
+        <element name="FLChallenge" positionX="160" positionY="192" width="128" height="103"/>
+        <element name="FLChallengeUpdate" positionX="-198" positionY="90" width="128" height="73"/>
+        <element name="FLMotivator" positionX="-18" positionY="171" width="128" height="58"/>
+        <element name="FLMotivatorImage" positionX="-9" positionY="180" width="128" height="43"/>
+        <element name="FLMotivatorVideo" positionX="0" positionY="189" width="128" height="43"/>
+        <element name="FLMotivatorText" positionX="9" positionY="198" width="128" height="43"/>
+    </elements>
+</model>
