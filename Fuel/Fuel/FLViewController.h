@@ -13,7 +13,5 @@
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 
-@property (nonatomic) NSManagedObjectContext * managedObjectContext;
-
 
 @end

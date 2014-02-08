@@ -12,6 +12,7 @@
 #define CELL_HEIGHT 110
 
 @interface FLViewController ()
+@property NSFetchedResultsController * fetchedResultsController;
 @end
 
 @implementation FLViewController
@@ -21,9 +22,6 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     
-    //Set up managed object context
-    FLAppDelegate * mainAppDelegate = (FLAppDelegate *) [[UIApplication sharedApplication] delegate];
-    self.managedObjectContext = mainAppDelegate.managedObjectContext;
     
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
 }
@@ -36,9 +34,20 @@
 
 #pragma mark - UITableViewDatasource
 
--(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return 3;
+    return [[self.fetchedResultsController sections] count];
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    NSInteger numberOfRows = 0;
+    
+    if ([[self.fetchedResultsController sections] count] > 0) {
+        id <NSFetchedResultsSectionInfo> sectionInfo = [[self.fetchedResultsController sections] objectAtIndex:section];
+        numberOfRows = [sectionInfo numberOfObjects];
+    }
+    return numberOfRows;
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
