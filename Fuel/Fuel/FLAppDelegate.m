@@ -19,7 +19,7 @@
     // Override point for customization after application launch.
     
     
-    [UILabel appearance]setFont:[UIFont fontNamesForFamilyName:@"]
+//    [UILabel appearance]setFont:[UIFont fontNamesForFamilyName:@"]
     
     return YES;
 }
