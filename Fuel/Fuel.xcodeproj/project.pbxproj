@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1790D26F18A6DAC000D084E4 /* FLCreateFuelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1790D26E18A6DAC000D084E4 /* FLCreateFuelViewController.m */; };
 		9D4FACB818A6B9BF00A49636 /* MainModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9D4FACB618A6B9BF00A49636 /* MainModel.xcdatamodeld */; };
 		9D4FACBB18A6BC7900A49636 /* FLMotivatorText.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D4FACBA18A6BC7900A49636 /* FLMotivatorText.m */; };
 		9D4FACBE18A6BC7A00A49636 /* FLMotivatorImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D4FACBD18A6BC7A00A49636 /* FLMotivatorImage.m */; };
@@ -42,6 +43,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1790D26D18A6DAC000D084E4 /* FLCreateFuelViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLCreateFuelViewController.h; sourceTree = "<group>"; };
+		1790D26E18A6DAC000D084E4 /* FLCreateFuelViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLCreateFuelViewController.m; sourceTree = "<group>"; };
 		60A683BC8AC34A84AEB55D57 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		9D4FACB718A6B9BF00A49636 /* MainModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MainModel.xcdatamodel; sourceTree = "<group>"; };
 		9D4FACB918A6BC7900A49636 /* FLMotivatorText.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLMotivatorText.h; sourceTree = "<group>"; };
@@ -158,6 +161,8 @@
 		9DFECF0618A5DDFC00BD49DC /* Fuel */ = {
 			isa = PBXGroup;
 			children = (
+				1790D26D18A6DAC000D084E4 /* FLCreateFuelViewController.h */,
+				1790D26E18A6DAC000D084E4 /* FLCreateFuelViewController.m */,
 				9DFECF0F18A5DDFC00BD49DC /* FLAppDelegate.h */,
 				9DFECF1018A5DDFC00BD49DC /* FLAppDelegate.m */,
 				9DFECF1218A5DDFC00BD49DC /* Main.storyboard */,
@@ -336,6 +341,7 @@
 				9D4FACC718A6BC7A00A49636 /* FLChallengeUpdate.m in Sources */,
 				9D4FACC118A6BC7A00A49636 /* FLMotivatorVideo.m in Sources */,
 				9D4FACBE18A6BC7A00A49636 /* FLMotivatorImage.m in Sources */,
+				1790D26F18A6DAC000D084E4 /* FLCreateFuelViewController.m in Sources */,
 				9DFECF1118A5DDFC00BD49DC /* FLAppDelegate.m in Sources */,
 				9DFECF0D18A5DDFC00BD49DC /* main.m in Sources */,
 				9D4FACC418A6BC7A00A49636 /* FLChallenge.m in Sources */,
