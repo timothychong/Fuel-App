@@ -1,0 +1,19 @@
+PODS:
+  - Masonry (0.4.0)
+  - NSDate+Calendar (0.0.2)
+  - RegExCategories (1.0)
+  - UIColor-Utilities (1.0.1)
+
+DEPENDENCIES:
+  - Masonry
+  - NSDate+Calendar
+  - RegExCategories
+  - UIColor-Utilities (~> 1.0.1)
+
+SPEC CHECKSUMS:
+  Masonry: d673617c9cbc24aaea90fba20b10e47fd9970a39
+  NSDate+Calendar: 3bc746ae54cbb5e576310a683897ef8248e5736f
+  RegExCategories: 4251b5b17ed9d0e16229652ff8539c131365e218
+  UIColor-Utilities: a392783be1b72e5d5ad9ae450ef2280239441bc8
+
+COCOAPODS: 0.29.0
