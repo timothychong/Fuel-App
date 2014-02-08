@@ -42,7 +42,7 @@ static FLGlobalHelper * defaultGlobalHelper = nil;
     
     challenege1.duration = @(60 * 60 * 24 * 20);
     challenege1.startDate = [NSDate new];
-    challenege.title = @"Mount Everest";
+    challenege1.title = @"Mount Everest";
     
     FLChallenge * challenege2 = [NSEntityDescription insertNewObjectForEntityForName:@"FLChallenge" inManagedObjectContext:self.managedObjectContext];
     challenege2.startDate = [NSDate new];

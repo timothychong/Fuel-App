@@ -8,6 +8,7 @@
 
 #import "FLCurrentChallengeViewController.h"
 #import "FLAppDelegate.h"
+#import "FLChallengeCell.h"
 
 #define CELL_HEIGHT 110
 
@@ -66,9 +67,11 @@
 {
     static NSString * identifier = @"ChallengeCell";
     
-    UITableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:identifier];
+   FLChallengeCell * cell = [tableView dequeueReusableCellWithIdentifier:identifier];
     
+    FLChallenge * challenge = [self.fetchedResultsController objectAtIndexPath:indexPath];
     
+    cell.titleLabel.text = challenge.title;
     
     return cell;
 }
