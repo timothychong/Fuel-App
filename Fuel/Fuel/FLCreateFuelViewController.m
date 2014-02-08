@@ -27,20 +27,19 @@
 - (IBAction)playVideo:(UIButton *)sender
 {
     
-    NSString *FileName=[NSString stringWithFormat:@"movie1.png"];
+    NSString *FileName=[NSString stringWithFormat:@"movie1.mp4"];
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     NSString *documentsDirectory = [paths objectAtIndex:0];
     NSString *tempPath = [documentsDirectory stringByAppendingPathComponent:FileName];
+    NSURL *url = [NSURL fileURLWithPath:tempPath];
     
-    MPMoviePlayerController *myPlayer = [[MPMoviePlayerController alloc] init];
-    myPlayer.shouldAutoplay = YES;
-    myPlayer.repeatMode = MPMovieRepeatModeOne;
-    myPlayer.fullscreen = YES;
-    myPlayer.movieSourceType = MPMovieSourceTypeFile;
-    myPlayer.scalingMode = MPMovieScalingModeAspectFit;
-    myPlayer.contentURL =[NSURL fileURLWithPath: tempPath];
-    [self.view addSubview:myPlayer.view];
-    [myPlayer play];
+    MPMoviePlayerViewController *moviePlayer = [[MPMoviePlayerViewController alloc] initWithContentURL: url];
+    moviePlayer.moviePlayer.controlStyle = MPMovieControlStyleNone;
+    moviePlayer.moviePlayer.scalingMode = MPMovieScalingModeFill;
+    [self presentViewController:moviePlayer animated:NO completion:^{
+        
+    }];
+
 }
 
 - (IBAction)takeImage:(UIButton *)sender
@@ -103,7 +102,7 @@
     {
         NSURL *moviePath = [info objectForKey: UIImagePickerControllerMediaURL];
         NSData * movieData = [NSData dataWithContentsOfURL:moviePath];
-        NSString *FileName=[NSString stringWithFormat:@"movie1.png"];
+        NSString *FileName=[NSString stringWithFormat:@"movie1.mp4"];
         NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
         NSString *documentsDirectory = [paths objectAtIndex:0];
         NSString *tempPath = [documentsDirectory stringByAppendingPathComponent:FileName];
