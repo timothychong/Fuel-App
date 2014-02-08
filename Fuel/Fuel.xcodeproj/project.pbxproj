@@ -21,6 +21,7 @@
 		9D4FACCD18A6CBC300A49636 /* FLGenericViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D4FACCC18A6CBC300A49636 /* FLGenericViewController.m */; };
 		9D4FACCF18A6CBF600A49636 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D4FACCE18A6CBF600A49636 /* CoreData.framework */; };
 		9D4FACD118A6D0F500A49636 /* Avenir Next.ttc in Resources */ = {isa = PBXBuildFile; fileRef = 9D4FACD018A6D0F500A49636 /* Avenir Next.ttc */; };
+		9D4FACD518A6E8C600A49636 /* FLGlobalHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D4FACD418A6E8C600A49636 /* FLGlobalHelper.m */; };
 		9DFECF0118A5DDFC00BD49DC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DFECF0018A5DDFC00BD49DC /* Foundation.framework */; };
 		9DFECF0318A5DDFC00BD49DC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DFECF0218A5DDFC00BD49DC /* CoreGraphics.framework */; };
 		9DFECF0518A5DDFC00BD49DC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DFECF0418A5DDFC00BD49DC /* UIKit.framework */; };
@@ -72,6 +73,8 @@
 		9D4FACCC18A6CBC300A49636 /* FLGenericViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLGenericViewController.m; sourceTree = "<group>"; };
 		9D4FACCE18A6CBF600A49636 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		9D4FACD018A6D0F500A49636 /* Avenir Next.ttc */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Avenir Next.ttc"; sourceTree = "<group>"; };
+		9D4FACD318A6E8C600A49636 /* FLGlobalHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLGlobalHelper.h; sourceTree = "<group>"; };
+		9D4FACD418A6E8C600A49636 /* FLGlobalHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLGlobalHelper.m; sourceTree = "<group>"; };
 		9DFECEFD18A5DDFC00BD49DC /* Fuel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fuel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9DFECF0018A5DDFC00BD49DC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		9DFECF0218A5DDFC00BD49DC /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -146,6 +149,8 @@
 		9D4FACD218A6E83300A49636 /* Back end */ = {
 			isa = PBXGroup;
 			children = (
+				9D4FACD318A6E8C600A49636 /* FLGlobalHelper.h */,
+				9D4FACD418A6E8C600A49636 /* FLGlobalHelper.m */,
 			);
 			name = "Back end";
 			sourceTree = "<group>";
@@ -377,6 +382,7 @@
 				1790D26F18A6DAC000D084E4 /* FLCreateFuelViewController.m in Sources */,
 				9DFECF1118A5DDFC00BD49DC /* FLAppDelegate.m in Sources */,
 				9D4FACCD18A6CBC300A49636 /* FLGenericViewController.m in Sources */,
+				9D4FACD518A6E8C600A49636 /* FLGlobalHelper.m in Sources */,
 				9DFECF0D18A5DDFC00BD49DC /* main.m in Sources */,
 				9D4FACC418A6BC7A00A49636 /* FLChallenge.m in Sources */,
 				9D4FACCA18A6BC7A00A49636 /* FLMotivator.m in Sources */,

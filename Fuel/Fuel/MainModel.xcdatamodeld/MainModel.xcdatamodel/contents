@@ -2,6 +2,7 @@
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="3401" systemVersion="13B42" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
     <entity name="FLChallenge" representedClassName="FLChallenge" syncable="YES">
         <attribute name="duration" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="startDate" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="motivators" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="FLMotivator" inverseName="challenge" inverseEntity="FLMotivator" syncable="YES"/>
         <relationship name="updates" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="FLChallengeUpdate" inverseName="challenge" inverseEntity="FLChallengeUpdate" syncable="YES"/>

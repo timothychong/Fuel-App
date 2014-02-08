@@ -7,6 +7,7 @@
 //
 
 #import "FLAppDelegate.h"
+#import "FLGlobalHelper.h"
 
 @implementation FLAppDelegate
 
@@ -18,12 +19,7 @@
 {
     // Override point for customization after application launch.
     
-    
-//    [UILabel appearance]setFont:[UIFont fontNamesForFamilyName:@"]
-    
-    
-    
-    
+    [[FLGlobalHelper defaultHelper]defaultSetup];
     return YES;
 }
 

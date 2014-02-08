@@ -12,7 +12,7 @@
 #define CELL_HEIGHT 110
 
 @interface FLViewController ()
-@property NSFetchedResultsController * fetchedResultsController;
+@property (nonatomic) NSFetchedResultsController * fetchedResultsController;
 @end
 
 @implementation FLViewController
@@ -25,6 +25,15 @@
     
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     self.tableView.backgroundColor = [UIColor colorWithHue:0 saturation:0 brightness:96 alpha:1];
+    
+    
+    NSError *error = nil;
+    
+    //Setup fetch result controller
+    if (![self.fetchedResultsController performFetch:&error]) {
+        NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
+        abort();
+    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -71,7 +80,7 @@
 
 #pragma mark - Fetched results Controller
 
--(NSFetchedResultsController *) fetchedGroupResultsController
+-(NSFetchedResultsController *) fetchedResultsController
 {
     if (!_fetchedResultsController) {
         
@@ -82,11 +91,10 @@
         [fetchRequest setEntity:entity];
         
         //Set up initial sorting
-//        NSArray * descriptors = @[[[NSSortDescriptor alloc]initWithKey:@"groupName" ascending:YES]];
+        NSArray * descriptors = @[]; //@[[[NSSortDescriptor alloc]initWithKey:@"groupName" ascending:YES]];
         
         fetchRequest.fetchBatchSize = 20;
-//        fetchRequest.sortDescriptors = descriptors;
-        
+        fetchRequest.sortDescriptors = descriptors;
         
         //Make the fetch result controller
         NSFetchedResultsController * newFetchedResultsController = [[NSFetchedResultsController alloc]initWithFetchRequest:fetchRequest managedObjectContext:self.managedObjectContext sectionNameKeyPath:nil cacheName:nil];
@@ -96,6 +104,13 @@
         _fetchedResultsController= newFetchedResultsController;
     }
     return _fetchedResultsController;
+}
+
+#pragma mark - UITableViewDelegate
+
+-(void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
 @end
