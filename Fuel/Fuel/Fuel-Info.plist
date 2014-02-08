@@ -26,10 +26,6 @@
 	<true/>
 	<key>UIMainStoryboardFile</key>
 	<string>Main</string>
-	<key>UIRequiredDeviceCapabilities</key>
-	<array>
-		<string>Avenir Next.ttc</string>
-	</array>
 	<key>UIAppFonts</key>
 	<array>
 		<string></string>
