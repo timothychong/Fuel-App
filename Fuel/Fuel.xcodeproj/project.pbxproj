@@ -11,7 +11,6 @@
 		1790D27118A6E01700D084E4 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1790D27018A6E01700D084E4 /* MediaPlayer.framework */; };
 		1790D27318A6E01B00D084E4 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1790D27218A6E01B00D084E4 /* AssetsLibrary.framework */; };
 		1790D27518A6E02800D084E4 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1790D27418A6E02800D084E4 /* MobileCoreServices.framework */; };
-		1790D27B18A7129200D084E4 /* FLMotivatorVideo.m in Sources */ = {isa = PBXBuildFile; fileRef = 1790D27A18A7129200D084E4 /* FLMotivatorVideo.m */; };
 		1790D28118A7129300D084E4 /* FLChallengeUpdate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1790D28018A7129300D084E4 /* FLChallengeUpdate.m */; };
 		1790D28418A7129300D084E4 /* FLMotivatorImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 1790D28318A7129300D084E4 /* FLMotivatorImage.m */; };
 		1790D28718A7129300D084E4 /* FLMotivatorText.m in Sources */ = {isa = PBXBuildFile; fileRef = 1790D28618A7129300D084E4 /* FLMotivatorText.m */; };
@@ -22,6 +21,7 @@
 		9D2DB90D18A715870097917F /* ChallengeDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9D2DB90C18A715870097917F /* ChallengeDetailView.xib */; };
 		9D3CB28A18A78CD500A493F4 /* FLInsiprationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D3CB28918A78CD500A493F4 /* FLInsiprationViewController.m */; };
 		9D3CB28D18A79CEB00A493F4 /* FLMotivator.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D3CB28C18A79CEB00A493F4 /* FLMotivator.m */; };
+		9D3CB29018A7A96200A493F4 /* FLMotivatorVideo.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D3CB28F18A7A96200A493F4 /* FLMotivatorVideo.m */; };
 		9D4FACB818A6B9BF00A49636 /* MainModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9D4FACB618A6B9BF00A49636 /* MainModel.xcdatamodeld */; };
 		9D4FACCD18A6CBC300A49636 /* FLGenericViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D4FACCC18A6CBC300A49636 /* FLGenericViewController.m */; };
 		9D4FACCF18A6CBF600A49636 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D4FACCE18A6CBF600A49636 /* CoreData.framework */; };
@@ -64,8 +64,6 @@
 		1790D27018A6E01700D084E4 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		1790D27218A6E01B00D084E4 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
 		1790D27418A6E02800D084E4 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
-		1790D27918A7129200D084E4 /* FLMotivatorVideo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLMotivatorVideo.h; sourceTree = "<group>"; };
-		1790D27A18A7129200D084E4 /* FLMotivatorVideo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLMotivatorVideo.m; sourceTree = "<group>"; };
 		1790D27F18A7129300D084E4 /* FLChallengeUpdate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLChallengeUpdate.h; sourceTree = "<group>"; };
 		1790D28018A7129300D084E4 /* FLChallengeUpdate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLChallengeUpdate.m; sourceTree = "<group>"; };
 		1790D28218A7129300D084E4 /* FLMotivatorImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLMotivatorImage.h; sourceTree = "<group>"; };
@@ -86,6 +84,8 @@
 		9D3CB28918A78CD500A493F4 /* FLInsiprationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLInsiprationViewController.m; sourceTree = "<group>"; };
 		9D3CB28B18A79CEB00A493F4 /* FLMotivator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLMotivator.h; sourceTree = "<group>"; };
 		9D3CB28C18A79CEB00A493F4 /* FLMotivator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLMotivator.m; sourceTree = "<group>"; };
+		9D3CB28E18A7A96200A493F4 /* FLMotivatorVideo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLMotivatorVideo.h; sourceTree = "<group>"; };
+		9D3CB28F18A7A96200A493F4 /* FLMotivatorVideo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLMotivatorVideo.m; sourceTree = "<group>"; };
 		9D4FACB718A6B9BF00A49636 /* MainModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MainModel.xcdatamodel; sourceTree = "<group>"; };
 		9D4FACCB18A6CBC300A49636 /* FLGenericViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLGenericViewController.h; sourceTree = "<group>"; };
 		9D4FACCC18A6CBC300A49636 /* FLGenericViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLGenericViewController.m; sourceTree = "<group>"; };
@@ -127,9 +127,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1790D27118A6E01700D084E4 /* MediaPlayer.framework in Frameworks */,
 				1790D27518A6E02800D084E4 /* MobileCoreServices.framework in Frameworks */,
 				1790D27318A6E01B00D084E4 /* AssetsLibrary.framework in Frameworks */,
-				1790D27118A6E01700D084E4 /* MediaPlayer.framework in Frameworks */,
 				9D4FACCF18A6CBF600A49636 /* CoreData.framework in Frameworks */,
 				9DFECF0318A5DDFC00BD49DC /* CoreGraphics.framework in Frameworks */,
 				9DFECF0518A5DDFC00BD49DC /* UIKit.framework in Frameworks */,
@@ -183,6 +183,8 @@
 			isa = PBXGroup;
 			children = (
 				9D4FACB618A6B9BF00A49636 /* MainModel.xcdatamodeld */,
+				9D3CB28E18A7A96200A493F4 /* FLMotivatorVideo.h */,
+				9D3CB28F18A7A96200A493F4 /* FLMotivatorVideo.m */,
 				9D3CB28B18A79CEB00A493F4 /* FLMotivator.h */,
 				9D3CB28C18A79CEB00A493F4 /* FLMotivator.m */,
 				1790D28818A7129300D084E4 /* FLChallenge.h */,
@@ -193,8 +195,6 @@
 				1790D28318A7129300D084E4 /* FLMotivatorImage.m */,
 				1790D27F18A7129300D084E4 /* FLChallengeUpdate.h */,
 				1790D28018A7129300D084E4 /* FLChallengeUpdate.m */,
-				1790D27918A7129200D084E4 /* FLMotivatorVideo.h */,
-				1790D27A18A7129200D084E4 /* FLMotivatorVideo.m */,
 				9D4FACDD18A6F67400A49636 /* FLDataModelCategory.h */,
 				9D4FACDE18A6F67400A49636 /* FLDataModelCategory.m */,
 			);
@@ -468,6 +468,7 @@
 				9D4FACDC18A6F5B000A49636 /* FLChallengeCell.m in Sources */,
 				1790D28118A7129300D084E4 /* FLChallengeUpdate.m in Sources */,
 				9D2DB90A18A7135B0097917F /* FLDetailChallengeViewController.m in Sources */,
+				9D3CB29018A7A96200A493F4 /* FLMotivatorVideo.m in Sources */,
 				9D3CB28D18A79CEB00A493F4 /* FLMotivator.m in Sources */,
 				1790D28418A7129300D084E4 /* FLMotivatorImage.m in Sources */,
 				1790D28718A7129300D084E4 /* FLMotivatorText.m in Sources */,
@@ -475,7 +476,6 @@
 				9DFECF1118A5DDFC00BD49DC /* FLAppDelegate.m in Sources */,
 				9D4FACCD18A6CBC300A49636 /* FLGenericViewController.m in Sources */,
 				9D4FACD518A6E8C600A49636 /* FLGlobalHelper.m in Sources */,
-				1790D27B18A7129200D084E4 /* FLMotivatorVideo.m in Sources */,
 				9D0C038718A75920008392AA /* FLProgressView.m in Sources */,
 				9DFECF0D18A5DDFC00BD49DC /* main.m in Sources */,
 				1790D28A18A7129300D084E4 /* FLChallenge.m in Sources */,

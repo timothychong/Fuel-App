@@ -10,6 +10,10 @@
 #import "FLMotivatorImage.h"
 #import "FLMotivatorText.h"
 #import "FLMotivatorVideo.h"
+#import <UIImage-Categories/UIImage+Resize.h>
+#import <UIImage-Categories/UIImage+RoundedCorner.h>
+#import <MediaPlayer/MediaPlayer.h>
+#import <AVFoundation/AVFoundation.h>
 
 @interface FLInsiprationViewController ()
 
@@ -40,6 +44,11 @@
         NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
         abort();
     }
+}
+
+-(void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear: animated];
 }
 
 - (void)didReceiveMemoryWarning
@@ -115,14 +124,30 @@
             
             UIImageView * imageView = (UIImageView *)[cell viewWithTag:IMAGE_TAG];
             UIImageView * playView = (UIImageView *) [cell viewWithTag:PLAY_TAG];
-            NSLog(@"%@", imageMotivator.path);
-            NSLog(@"%@", [FLGlobalHelper imageWithPath:imageMotivator.path]);
-            imageView.image = [FLGlobalHelper imageWithPath:imageMotivator.path];
-            playView.image = nil;
+            UIImage * image = [FLGlobalHelper imageWithPath:imageMotivator.path];
+            image = [image resizedImage:CGSizeMake(300, 300) interpolationQuality:0];
+            image = [image roundedCornerImage:5 borderSize:1];
+            imageView.image = image;
+            playView.alpha = 0.01f;
         
         }
             break;
         case FLMotivatorTypeVideo:
+        {
+            FLMotivatorVideo * videoMotivator = (FLMotivatorVideo *) motivator;
+            UIImageView * imageView = (UIImageView *)[cell viewWithTag:IMAGE_TAG];
+            UIImageView * playView = (UIImageView *) [cell viewWithTag:PLAY_TAG];
+            UIImage *image = [self thumbnailFromVideoAtURL:[NSURL URLWithString:videoMotivator.path]];
+            NSLog(@"%@", videoMotivator.path);
+            NSLog(@"%@", image);
+            image = [image resizedImage:CGSizeMake(300, 300) interpolationQuality:0];
+            image = [image roundedCornerImage:5 borderSize:1];
+            NSLog(@"%@", image);
+            imageView.image = image;
+            playView.alpha = 1;
+            
+        }
+            
             break;
         case FLMotivatorTypeText:
         {
@@ -139,7 +164,20 @@
             break;
     }
 }
-//
+
+- (UIImage *)thumbnailFromVideoAtURL:(NSURL *)url
+{
+    AVAsset *asset = [AVAsset assetWithURL:url];
+    AVAssetImageGenerator *imageGenerator = [[AVAssetImageGenerator alloc]initWithAsset:asset];
+    CMTime time = [asset duration];
+    time.value = 0;
+    CGImageRef imageRef = [imageGenerator copyCGImageAtTime:time actualTime:NULL error:NULL];
+    UIImage *thumbnail = [UIImage imageWithCGImage:imageRef];
+    CGImageRelease(imageRef);  // CGImageRef won't be released by ARC
+    
+    return thumbnail;
+}
+
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString * cameraIdentifier = @"InspirationCameraCell";

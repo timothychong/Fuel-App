@@ -4,6 +4,7 @@ PODS:
   - NSDate+Calendar (0.0.2)
   - RegExCategories (1.0)
   - UIColor-Utilities (1.0.1)
+  - UIImage-Categories (0.0.1)
 
 DEPENDENCIES:
   - LDProgressView
@@ -11,6 +12,7 @@ DEPENDENCIES:
   - NSDate+Calendar
   - RegExCategories
   - UIColor-Utilities (~> 1.0.1)
+  - UIImage-Categories
 
 SPEC CHECKSUMS:
   LDProgressView: 26b07fcf00eb066b90f273590955fe8fe27812bd
@@ -18,5 +20,6 @@ SPEC CHECKSUMS:
   NSDate+Calendar: 3bc746ae54cbb5e576310a683897ef8248e5736f
   RegExCategories: 4251b5b17ed9d0e16229652ff8539c131365e218
   UIColor-Utilities: a392783be1b72e5d5ad9ae450ef2280239441bc8
+  UIImage-Categories: d9f10e0afb9b281b35a3c2b0c7d16d1ca251d824
 
 COCOAPODS: 0.29.0
