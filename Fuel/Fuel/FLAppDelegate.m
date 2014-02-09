@@ -23,11 +23,15 @@
     
     [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
     [[UINavigationBar appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
-
+    
     [[UINavigationBar appearance] setBackgroundImage:[UIImage imageNamed:@"Navigation_TopMenuBar"] forBarMetrics:UIBarMetricsDefault];
 
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
     
+    [[UINavigationBar appearance] setTitleTextAttributes:
+     [NSDictionary dictionaryWithObjectsAndKeys:
+      [UIColor whiteColor], NSForegroundColorAttributeName,
+      [UIFont fontWithName:@"Avenir" size:17.0], NSFontAttributeName,nil]];
     return YES;
 }
 
