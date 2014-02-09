@@ -306,7 +306,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="168"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="100" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" ambiguous="YES" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="279" translatesAutoresizingMaskIntoConstraints="NO" id="bqI-DL-f6R">
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="100" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="279" translatesAutoresizingMaskIntoConstraints="NO" id="bqI-DL-f6R">
                                                     <rect key="frame" x="20" y="20" width="279" height="95"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <string key="text">LabelofjoweijfiojewiofjiowejfiowejfoijinovwejfivejwiofLabelofjoweijfiojewiofjiowejfiowejfoijinovwejfivejwiofLabelofjoweijfiojewiofjiowejfiowejfoijinovwejfivejwiof</string>
@@ -322,12 +322,12 @@
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="IB1-kQ-mDs" firstAttribute="top" secondItem="bqI-DL-f6R" secondAttribute="bottom" constant="8" symbolic="YES" id="Dd1-zX-6Vr"/>
-                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="bqI-DL-f6R" secondAttribute="trailing" constant="20" symbolic="YES" id="VFh-MS-nPL"/>
-                                                <constraint firstAttribute="bottom" secondItem="IB1-kQ-mDs" secondAttribute="bottom" constant="21" id="f3S-pd-seq"/>
-                                                <constraint firstItem="IB1-kQ-mDs" firstAttribute="leading" secondItem="bqI-DL-f6R" secondAttribute="leading" id="f84-Xh-gbQ"/>
-                                                <constraint firstItem="bqI-DL-f6R" firstAttribute="leading" secondItem="7Zj-HD-vpy" secondAttribute="leading" constant="20" id="mNb-Xw-NMg"/>
-                                                <constraint firstItem="bqI-DL-f6R" firstAttribute="top" secondItem="7Zj-HD-vpy" secondAttribute="top" constant="20" id="pHC-Mv-vsz"/>
+                                                <constraint firstItem="bqI-DL-f6R" firstAttribute="leading" secondItem="7Zj-HD-vpy" secondAttribute="leading" constant="20" id="1zZ-e0-i9v"/>
+                                                <constraint firstAttribute="bottom" secondItem="IB1-kQ-mDs" secondAttribute="bottom" constant="21" id="XmG-mA-4tw"/>
+                                                <constraint firstItem="IB1-kQ-mDs" firstAttribute="leading" secondItem="7Zj-HD-vpy" secondAttribute="leading" constant="20" id="YJv-HV-6mG"/>
+                                                <constraint firstItem="bqI-DL-f6R" firstAttribute="top" secondItem="7Zj-HD-vpy" secondAttribute="top" constant="20" id="YeE-VQ-4RW"/>
+                                                <constraint firstAttribute="trailing" secondItem="bqI-DL-f6R" secondAttribute="trailing" constant="21" id="Zjb-qQ-EXY"/>
+                                                <constraint firstItem="IB1-kQ-mDs" firstAttribute="top" secondItem="bqI-DL-f6R" secondAttribute="bottom" constant="8" id="ZsJ-kc-uIH"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>

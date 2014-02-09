@@ -32,6 +32,19 @@
      [NSDictionary dictionaryWithObjectsAndKeys:
       [UIColor whiteColor], NSForegroundColorAttributeName,
       [UIFont fontWithName:@"Avenir" size:17.0], NSFontAttributeName,nil]];
+    
+    
+    NSFetchRequest * request = [NSFetchRequest new];
+    request.entity = [NSEntityDescription entityForName:@"FLChallenge" inManagedObjectContext:self.managedObjectContext];
+    
+    request.predicate = [NSPredicate predicateWithFormat:@"title = %@", @"finish college"];
+    
+    NSArray * array = [self.managedObjectContext executeFetchRequest:request error:nil];
+    
+    FLChallenge * challenge =array [0];
+    challenge.startDate = [challenge.startDate dateByAddingYear:-1];
+    [self.managedObjectContext save:nil];
+    
     return YES;
 }
 

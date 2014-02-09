@@ -64,9 +64,21 @@
     switch ([self.myMotivator type]) {
         case FLMotivatorTypeText:
         {
+            [self.playButton removeFromSuperview];
+            [self.imageView removeFromSuperview];
             UILabel * label = [[UILabel alloc]init];
+            label.lineBreakMode = NSLineBreakByWordWrapping;
+            label.numberOfLines = 0;
+            label.font = [UIFont fontWithName:@"Avenir Next" size:20];
             [view addSubview:label];
-            
+            label.text = ((FLMotivatorText *)self.myMotivator).text;
+            [label makeConstraints:^(MASConstraintMaker *make) {
+                make.centerX.equalTo(view.centerX);
+                make.top.equalTo(self.daysAgoLabel.bottom).offset(20);
+                make.bottom.equalTo(self.dateAddedLabel.top).offset(-20);
+                make.leading.equalTo(view.left).offset(30);
+                make.trailing.equalTo(view.right).offset(30);
+            }];
         }
             
             break;
