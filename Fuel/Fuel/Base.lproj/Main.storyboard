@@ -419,32 +419,40 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.95686274509803915" green="0.95686274509803915" blue="0.95686274509803915" alpha="1" colorSpace="calibratedRGB"/>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="InspirationTextCell" rowHeight="182" id="Lhp-5f-g2Q">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="InspirationCameraCell" rowHeight="182" id="Lhp-5f-g2Q">
                                         <rect key="frame" x="0.0" y="101" width="320" height="182"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Lhp-5f-g2Q" id="wVY-jK-ljh">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="181"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Date added: July 21, 2013" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ebW-ph-pvc">
-                                                    <rect key="frame" x="20" y="154" width="204" height="24"/>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date added: July 21, 2013" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ebW-ph-pvc">
+                                                    <rect key="frame" x="20" y="75" width="204" height="24"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
                                                     <color key="textColor" red="0.66666666666666663" green="0.69803921568627447" blue="0.70588235294117641" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FRp-28-2KM">
-                                                    <rect key="frame" x="20" y="20" width="280" height="126"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Photo Icon" translatesAutoresizingMaskIntoConstraints="NO" id="FRp-28-2KM">
+                                                    <rect key="frame" x="139" y="20" width="43" height="43"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tCo-W0-bFN" userLabel="play">
-                                                    <rect key="frame" x="26" y="18" width="240" height="128"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Play Icon" translatesAutoresizingMaskIntoConstraints="NO" id="tCo-W0-bFN" userLabel="play">
+                                                    <rect key="frame" x="134" y="15" width="52" height="52"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="centerX" secondItem="FRp-28-2KM" secondAttribute="centerX" id="AsB-hX-kps"/>
+                                                <constraint firstItem="tCo-W0-bFN" firstAttribute="centerX" secondItem="FRp-28-2KM" secondAttribute="centerX" id="K2o-6S-lzF"/>
+                                                <constraint firstItem="tCo-W0-bFN" firstAttribute="centerY" secondItem="FRp-28-2KM" secondAttribute="centerY" id="Wj8-KS-5yC"/>
+                                                <constraint firstItem="ebW-ph-pvc" firstAttribute="top" secondItem="tCo-W0-bFN" secondAttribute="bottom" constant="8" symbolic="YES" id="ZCQ-Cq-B4X"/>
+                                                <constraint firstItem="ebW-ph-pvc" firstAttribute="leading" secondItem="wVY-jK-ljh" secondAttribute="leading" constant="20" id="nTJ-Ht-fSU"/>
+                                                <constraint firstItem="FRp-28-2KM" firstAttribute="top" secondItem="wVY-jK-ljh" secondAttribute="top" constant="20" id="pGW-BM-6KB"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="93" id="g3n-kh-FmN">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="InspirationTextCell" rowHeight="93" id="g3n-kh-FmN">
                                         <rect key="frame" x="0.0" y="283" width="320" height="93"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="g3n-kh-FmN" id="7Zj-HD-vpy">
@@ -541,6 +549,8 @@
     <resources>
         <image name="Back Button" width="189" height="53"/>
         <image name="Navigation_TopMenuBar" width="320" height="64"/>
+        <image name="Photo Icon" width="43" height="43"/>
+        <image name="Play Icon" width="52" height="52"/>
         <image name="Timer-Icon" width="26" height="25"/>
         <image name="X-Out Icon" width="14" height="14"/>
     </resources>
