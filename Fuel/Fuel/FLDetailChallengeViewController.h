@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "FLChallenge.h"
 
-@interface FLDetailChallengeViewController : UIViewController
+@interface FLDetailChallengeViewController : UIViewController <UIActionSheetDelegate>
 
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (nonatomic) FLChallenge * myChallenge;
@@ -17,5 +17,6 @@
 @property (weak, nonatomic) IBOutlet UIButton *refuelButton;
 @property (weak, nonatomic) IBOutlet UILabel *timeLeftLabel;
 - (IBAction)refuel:(id)sender;
+- (IBAction)removeFuel:(id)sender;
 
 @end

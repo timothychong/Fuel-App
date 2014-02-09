@@ -100,14 +100,11 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jml-hi-GGM">
-                    <rect key="frame" x="-8" y="432" width="328" height="45"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jml-hi-GGM">
+                    <rect key="frame" x="66" y="439" width="189" height="53"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="45" id="Fuh-VZ-56M"/>
-                    </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <state key="normal" title="Done">
+                    <state key="normal" image="Done Button">
                         <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
@@ -205,6 +202,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                 <constraint firstItem="S6v-fo-8Ch" firstAttribute="centerY" secondItem="5Tu-Sa-9dG" secondAttribute="centerY" id="KzF-sa-pzj"/>
                 <constraint firstAttribute="trailing" secondItem="MBy-WM-IPo" secondAttribute="trailing" id="MSS-6S-94s"/>
                 <constraint firstItem="uqg-Gs-V1M" firstAttribute="leading" secondItem="1" secondAttribute="leading" constant="20" id="N0p-mc-Mnt"/>
+                <constraint firstAttribute="centerX" secondItem="jml-hi-GGM" secondAttribute="centerX" id="OWV-fk-co9"/>
                 <constraint firstItem="SZw-eO-LFh" firstAttribute="top" secondItem="m3E-5J-KCH" secondAttribute="top" id="P5C-AY-cCr"/>
                 <constraint firstAttribute="trailing" secondItem="E2C-16-ehm" secondAttribute="trailing" constant="20" id="X4P-Jr-xb0"/>
                 <constraint firstItem="MBy-WM-IPo" firstAttribute="top" secondItem="fz4-h9-CKA" secondAttribute="bottom" constant="8" id="XKl-nM-m0S"/>
@@ -213,12 +211,10 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                 <constraint firstItem="E2C-16-ehm" firstAttribute="centerY" secondItem="3KR-xm-moN" secondAttribute="centerY" id="acO-ww-ueM"/>
                 <constraint firstItem="uqg-Gs-V1M" firstAttribute="top" secondItem="7b9-sp-khZ" secondAttribute="bottom" constant="17" id="bPV-Hr-EhU"/>
                 <constraint firstAttribute="trailing" secondItem="9jF-Ja-9nW" secondAttribute="trailing" id="d4O-J3-Ndi"/>
-                <constraint firstAttribute="trailing" secondItem="jml-hi-GGM" secondAttribute="trailing" id="doM-ab-7aZ"/>
                 <constraint firstItem="uqg-Gs-V1M" firstAttribute="centerY" secondItem="3KR-xm-moN" secondAttribute="centerY" id="dr9-yb-ye6"/>
                 <constraint firstAttribute="trailing" secondItem="URR-tF-0II" secondAttribute="trailing" constant="39" id="eAK-7Y-T8T"/>
-                <constraint firstItem="jml-hi-GGM" firstAttribute="top" secondItem="S6v-fo-8Ch" secondAttribute="bottom" constant="13" id="fiA-tX-nmv"/>
+                <constraint firstItem="jml-hi-GGM" firstAttribute="top" secondItem="S6v-fo-8Ch" secondAttribute="bottom" constant="20" id="fiA-tX-nmv"/>
                 <constraint firstItem="URR-tF-0II" firstAttribute="top" secondItem="SZw-eO-LFh" secondAttribute="top" id="fst-uJ-LbD"/>
-                <constraint firstItem="jml-hi-GGM" firstAttribute="leading" secondItem="1" secondAttribute="leading" constant="-8" id="gJd-et-jUB"/>
                 <constraint firstItem="Tey-JA-wRa" firstAttribute="leading" secondItem="fz4-h9-CKA" secondAttribute="leading" id="hG2-jz-kXY"/>
                 <constraint firstItem="7b9-sp-khZ" firstAttribute="leading" secondItem="1" secondAttribute="leading" constant="20" id="i9t-3O-OBi"/>
                 <constraint firstAttribute="centerX" secondItem="3KR-xm-moN" secondAttribute="centerX" id="k2S-eL-8K0"/>
@@ -232,6 +228,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
         </view>
     </objects>
     <resources>
+        <image name="Done Button" width="189" height="53"/>
         <image name="Photo Icon" width="43" height="43"/>
         <image name="Text Icon" width="43" height="43"/>
         <image name="Video Icon" width="43" height="43"/>

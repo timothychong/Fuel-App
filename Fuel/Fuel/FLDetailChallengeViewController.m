@@ -55,4 +55,25 @@
     [self presentViewController:dvc animated:YES completion:nil];
     
 }
+
+- (IBAction)removeFuel:(id)sender {
+    
+    UIActionSheet * actionSheet = [[UIActionSheet alloc]initWithTitle:@"Are you sure want to remove Fuel?" delegate:self cancelButtonTitle:@"Cancel" destructiveButtonTitle:@"Delete" otherButtonTitles:nil];
+    
+    [actionSheet showInView:self.view];
+}
+
+#pragma mark - UIActionSheetDelegate
+
+-(void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    switch (buttonIndex) {
+        case 1:
+            [self.navigationController popViewControllerAnimated:YES];
+            break;
+        default:
+            break;
+    }
+}
+
 @end
