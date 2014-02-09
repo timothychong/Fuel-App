@@ -22,6 +22,7 @@
 		9D3CB28A18A78CD500A493F4 /* FLInsiprationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D3CB28918A78CD500A493F4 /* FLInsiprationViewController.m */; };
 		9D3CB28D18A79CEB00A493F4 /* FLMotivator.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D3CB28C18A79CEB00A493F4 /* FLMotivator.m */; };
 		9D3CB29018A7A96200A493F4 /* FLMotivatorVideo.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D3CB28F18A7A96200A493F4 /* FLMotivatorVideo.m */; };
+		9D3CB29318A7B03400A493F4 /* FLInspirationCameraCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D3CB29218A7B03400A493F4 /* FLInspirationCameraCell.m */; };
 		9D4FACB818A6B9BF00A49636 /* MainModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9D4FACB618A6B9BF00A49636 /* MainModel.xcdatamodeld */; };
 		9D4FACCD18A6CBC300A49636 /* FLGenericViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D4FACCC18A6CBC300A49636 /* FLGenericViewController.m */; };
 		9D4FACCF18A6CBF600A49636 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D4FACCE18A6CBF600A49636 /* CoreData.framework */; };
@@ -86,6 +87,8 @@
 		9D3CB28C18A79CEB00A493F4 /* FLMotivator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLMotivator.m; sourceTree = "<group>"; };
 		9D3CB28E18A7A96200A493F4 /* FLMotivatorVideo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLMotivatorVideo.h; sourceTree = "<group>"; };
 		9D3CB28F18A7A96200A493F4 /* FLMotivatorVideo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLMotivatorVideo.m; sourceTree = "<group>"; };
+		9D3CB29118A7B03400A493F4 /* FLInspirationCameraCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLInspirationCameraCell.h; sourceTree = "<group>"; };
+		9D3CB29218A7B03400A493F4 /* FLInspirationCameraCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLInspirationCameraCell.m; sourceTree = "<group>"; };
 		9D4FACB718A6B9BF00A49636 /* MainModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MainModel.xcdatamodel; sourceTree = "<group>"; };
 		9D4FACCB18A6CBC300A49636 /* FLGenericViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLGenericViewController.h; sourceTree = "<group>"; };
 		9D4FACCC18A6CBC300A49636 /* FLGenericViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLGenericViewController.m; sourceTree = "<group>"; };
@@ -175,6 +178,8 @@
 			children = (
 				9D3CB28818A78CD500A493F4 /* FLInsiprationViewController.h */,
 				9D3CB28918A78CD500A493F4 /* FLInsiprationViewController.m */,
+				9D3CB29118A7B03400A493F4 /* FLInspirationCameraCell.h */,
+				9D3CB29218A7B03400A493F4 /* FLInspirationCameraCell.m */,
 			);
 			name = Inspiration;
 			sourceTree = "<group>";
@@ -462,6 +467,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9D4FACB818A6B9BF00A49636 /* MainModel.xcdatamodeld in Sources */,
+				9D3CB29318A7B03400A493F4 /* FLInspirationCameraCell.m in Sources */,
 				9D4FACDF18A6F67400A49636 /* FLDataModelCategory.m in Sources */,
 				1790D26F18A6DAC000D084E4 /* FLCreateFuelViewController.m in Sources */,
 				9DBD922918A700F30050F56A /* FLNewChallengeViewController.m in Sources */,

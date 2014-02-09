@@ -100,6 +100,7 @@
         
         FLMotivatorText * newText = [NSEntityDescription insertNewObjectForEntityForName: @"FLMotivatorText" inManagedObjectContext:self.managedObjectContext];
         newText.text = text;
+        newText.dateAdded = [NSDate new];
         [self.myChallenge addMotivatorsObject: newText];
     }
 }
@@ -169,6 +170,7 @@
         
         FLMotivatorVideo * newVideo = [NSEntityDescription insertNewObjectForEntityForName: @"FLMotivatorVideo" inManagedObjectContext:self.managedObjectContext];
         newVideo.path = path;
+        newVideo.dateAdded = [NSDate new];
         [self.myChallenge addMotivatorsObject: newVideo];
         NSError * error;
         [self.managedObjectContext save:&error];
@@ -208,6 +210,7 @@
         
         FLMotivatorImage * newImage = [NSEntityDescription insertNewObjectForEntityForName: @"FLMotivatorImage" inManagedObjectContext:self.managedObjectContext];
         newImage.path = path;
+        newImage.dateAdded = [NSDate new];
         [self.myChallenge addMotivatorsObject: newImage];
         NSError * error;
         [self.managedObjectContext save:&error];
