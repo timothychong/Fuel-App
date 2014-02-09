@@ -14,6 +14,13 @@ static FLGlobalHelper * defaultGlobalHelper = nil;
 
 @implementation FLGlobalHelper
 
++ (UIImage *) imageWithPath:(NSString *) str;
+{
+    NSURL *targetURL = [NSURL fileURLWithPath: str];
+    NSData *returnData=[NSData dataWithContentsOfURL:targetURL];
+    UIImage *imagemain=[UIImage imageWithData: returnData];
+    return imagemain;
+}
 
 + (FLGlobalHelper *) defaultHelper
 {
