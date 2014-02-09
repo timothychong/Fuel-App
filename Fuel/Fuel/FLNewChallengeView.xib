@@ -6,7 +6,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FLNewChallengeViewController">
             <connections>
-                <outlet property="date" destination="MBy-WM-IPo" id="k4s-4N-6wH"/>
+                <outlet property="datePicker" destination="MBy-WM-IPo" id="p8c-AG-Fzh"/>
                 <outlet property="goalName" destination="Tey-JA-wRa" id="ujS-oF-E8x"/>
                 <outlet property="goalNameTextField" destination="Tey-JA-wRa" id="TA2-Wf-xit"/>
             </connections>

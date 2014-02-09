@@ -17,7 +17,7 @@
 @interface FLNewChallengeViewController () <UINavigationControllerDelegate, UIImagePickerControllerDelegate, UIAlertViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextField *goalName;
-@property (weak, nonatomic) IBOutlet UIDatePicker *date;
+@property (weak, nonatomic) IBOutlet UIDatePicker *datePicker;
 
 @end
 
@@ -25,10 +25,10 @@
 
 - (IBAction)saveChallenge
 {
-    if (![self.goalName.text isEqualToString: @""] && self.date.date)
+    if (!(self.goalName.text.length == 0) && [self.datePicker.date isGreaterDate:[NSDate new]])
     {
         self.myChallenge.title = self.goalName.text;
-        self.myChallenge.endDate = self.date.date;
+        self.myChallenge.endDate = self.datePicker.date;
         self.myChallenge.startDate = [NSDate date];
         NSError * error;
         [self.managedObjectContext save: &error];
@@ -36,8 +36,14 @@
     }
     else
     {
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error" message: @"There is an incomplete field!" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
-        [alert show];
+        if (self.goalName.text.length == 0) {
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error" message: @"There is an incomplete field!" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+            [alert show];
+        }else{
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error" message: @"Date must be later than today!" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+            [alert show];
+        }
+        
     }
 }
 

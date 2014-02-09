@@ -74,9 +74,21 @@
                         <action selector="removeFuel:" destination="-1" eventType="touchUpInside" id="Sra-oD-5YW"/>
                     </connections>
                 </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Inspiration_Num_Circle" translatesAutoresizingMaskIntoConstraints="NO" id="qw6-Uc-xuw">
+                    <rect key="frame" x="244" y="208" width="31" height="32"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="8" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kSN-bv-vfH">
+                    <rect key="frame" x="255" y="214" width="10" height="21"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.97532105445861816" green="0.28879678249359131" blue="0.21731527149677277" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
+                <constraint firstAttribute="trailing" secondItem="qw6-Uc-xuw" secondAttribute="trailing" constant="45" id="1w9-8G-qmS"/>
                 <constraint firstItem="Vtd-T4-hJn" firstAttribute="top" secondItem="7fs-KI-aNf" secondAttribute="bottom" constant="22" id="7Sd-su-r7Z"/>
                 <constraint firstItem="Vtd-T4-hJn" firstAttribute="leading" secondItem="1rc-1h-TWz" secondAttribute="leading" id="7h8-rU-hnS"/>
                 <constraint firstAttribute="centerX" secondItem="8HE-AT-sca" secondAttribute="centerX" id="CQR-s3-H60"/>
@@ -87,12 +99,15 @@
                 <constraint firstItem="7fs-KI-aNf" firstAttribute="leading" secondItem="Vtd-T4-hJn" secondAttribute="leading" id="UDM-5L-oFE"/>
                 <constraint firstItem="J9O-HV-X8h" firstAttribute="centerX" secondItem="ztQ-mW-FT8" secondAttribute="centerX" constant="0.5" id="Y8J-mZ-LOy"/>
                 <constraint firstAttribute="centerX" secondItem="A7K-z2-Bgj" secondAttribute="centerX" id="aAL-8Q-xeN"/>
+                <constraint firstItem="qw6-Uc-xuw" firstAttribute="centerY" secondItem="7fs-KI-aNf" secondAttribute="centerY" id="eno-hZ-o27"/>
                 <constraint firstItem="7fs-KI-aNf" firstAttribute="leading" secondItem="1" secondAttribute="leading" constant="45" id="g6u-0f-nQx"/>
                 <constraint firstItem="8HE-AT-sca" firstAttribute="top" secondItem="A7K-z2-Bgj" secondAttribute="bottom" constant="15" id="iDT-Cj-X4V"/>
                 <constraint firstItem="A7K-z2-Bgj" firstAttribute="top" secondItem="1rc-1h-TWz" secondAttribute="bottom" constant="52" id="kec-r0-1cz"/>
                 <constraint firstItem="ztQ-mW-FT8" firstAttribute="top" secondItem="1" secondAttribute="top" id="l8W-ug-GPl"/>
                 <constraint firstItem="7fs-KI-aNf" firstAttribute="top" secondItem="ZL8-oR-mG2" secondAttribute="bottom" constant="22" id="pmo-r2-WJq"/>
                 <constraint firstItem="J9O-HV-X8h" firstAttribute="centerY" secondItem="ztQ-mW-FT8" secondAttribute="centerY" constant="-0.5" id="sLX-X8-Cg0"/>
+                <constraint firstItem="qw6-Uc-xuw" firstAttribute="centerX" secondItem="kSN-bv-vfH" secondAttribute="centerX" id="vTW-eI-r0F"/>
+                <constraint firstItem="qw6-Uc-xuw" firstAttribute="centerY" secondItem="kSN-bv-vfH" secondAttribute="centerY" id="zZ5-nz-vKp"/>
             </constraints>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
@@ -101,6 +116,7 @@
     <resources>
         <image name="Delete Button" width="189" height="53"/>
         <image name="Goals_Pattern_BG" width="320" height="145"/>
+        <image name="Inspiration_Num_Circle" width="31" height="32"/>
         <image name="Refuel Me" width="189" height="53"/>
     </resources>
 </document>
