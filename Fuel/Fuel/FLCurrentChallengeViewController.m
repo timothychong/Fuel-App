@@ -36,8 +36,9 @@
         NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
         abort();
     }
-    
+ 
 }
+
 
 - (void)didReceiveMemoryWarning
 {
@@ -115,6 +116,8 @@
 
 -(void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    
+    
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 

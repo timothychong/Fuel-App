@@ -124,7 +124,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="0ST-Cr-ieu" id="Rzz-eF-CPx"/>
-                        <segue destination="hhq-Qy-NsE" kind="push" id="ES6-2e-cWw"/>
+                        <segue destination="hhq-Qy-NsE" kind="push" identifier="DetailSegue" id="ES6-2e-cWw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>

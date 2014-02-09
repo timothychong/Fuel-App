@@ -7,9 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "FLChallenge.h"
 
 @interface FLDetailChallengeViewController : UIViewController
 
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
+@property (nonatomic) FLChallenge * myChallenge;
 
 @end
