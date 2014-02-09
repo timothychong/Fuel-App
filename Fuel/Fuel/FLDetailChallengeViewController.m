@@ -40,7 +40,7 @@
     self.titleLabel.text = self.myChallenge.title;
     self.timeLeftLabel.text = [self.myChallenge dayLeftString];
     [self.refuelButton setImage:[UIImage imageNamed:@"Refuel Me - Selected"] forState:UIControlStateHighlighted];
-    
+    self.numberLabel.text = [NSString stringWithFormat:@"%d",self.myChallenge.motivators.count];
 }
 
 - (void)didReceiveMemoryWarning
