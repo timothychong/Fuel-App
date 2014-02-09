@@ -25,13 +25,14 @@
 
 - (IBAction)saveChallenge
 {
-    if (self.goalName.text && self.date.date)
+    if (![self.goalName.text isEqualToString: @""] && self.date.date)
     {
         self.myChallenge.title = self.goalName.text;
         self.myChallenge.endDate = self.date.date;
         self.myChallenge.startDate = [NSDate date];
         NSError * error;
         [self.managedObjectContext save: &error];
+        [self dismissViewControllerAnimated:YES completion:nil];
     }
     else
     {
@@ -70,7 +71,7 @@
 
 - (IBAction)addText
 {
-    UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Get Fuel"
+    UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Your Message"
                                                       message: nil
                                                      delegate: self
                                             cancelButtonTitle: @"Cancel"
