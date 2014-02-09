@@ -33,6 +33,10 @@
     self.scrollView.contentSize = view.frame.size;
     self.scrollView.scrollEnabled = YES;
 
+    self.titleLabel.text = self.myChallenge.title;
+    self.timeLeftLabel.text = [self.myChallenge dayLeftString];
+    
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -41,4 +45,6 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)refuel:(id)sender {
+}
 @end

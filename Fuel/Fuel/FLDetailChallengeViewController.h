@@ -13,5 +13,8 @@
 
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (nonatomic) FLChallenge * myChallenge;
+@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
+@property (weak, nonatomic) IBOutlet UILabel *timeLeftLabel;
+- (IBAction)refuel:(id)sender;
 
 @end
