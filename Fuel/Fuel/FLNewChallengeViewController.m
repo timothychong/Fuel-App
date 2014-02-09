@@ -10,6 +10,9 @@
 #import <MobileCoreServices/UTCoreTypes.h>
 #import <AssetsLibrary/AssetsLibrary.h>
 #import "FLNewChallengeViewController.h"
+#import "FLMotivatorVideo.h"
+#import "FLMotivatorImage.h"
+#import "FLMotivatorText.h"
 
 @interface FLNewChallengeViewController () <UINavigationControllerDelegate, UIImagePickerControllerDelegate>
 
@@ -85,12 +88,37 @@
     {
         NSURL *moviePath = [info objectForKey: UIImagePickerControllerMediaURL];
         NSData * movieData = [NSData dataWithContentsOfURL:moviePath];
-        NSString *FileName=[NSString stringWithFormat:@"movie1.mp4"];
-        NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-        NSString *documentsDirectory = [paths objectAtIndex:0];
-        NSString *tempPath = [documentsDirectory stringByAppendingPathComponent:FileName];
-        [movieData writeToFile: tempPath atomically:YES];
+        
+        NSUserDefaults * defaults = [NSUserDefaults standardUserDefaults];
+        NSNumber* currentIndex = [defaults objectForKey: @"videoIndex"];
+        
+        if (currentIndex)
+        {
+            int currentIndexInt = currentIndex.intValue;
+            currentIndexInt ++;
+            currentIndex = [NSNumber numberWithInt: currentIndexInt];
+        }
+        else
+        {
+            currentIndex = [NSNumber numberWithInt: 0];
+        }
+        
+        [defaults setObject: currentIndex forKey: @"videoIndex"];
+        [defaults synchronize];
+        
+        NSString * nameWithoutFileType = [currentIndex stringValue];
+        NSString * nameWithFileType = [nameWithoutFileType stringByAppendingPathComponent: @".mp4"];
+        NSArray * paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+        NSString * documentsDirectory = [paths objectAtIndex:0];
+        NSString * path = [documentsDirectory stringByAppendingPathComponent:nameWithFileType];
+        [movieData writeToFile: path atomically:YES];
         [picker dismissViewControllerAnimated:YES completion:nil];
+        
+        // core data
+        
+        FLMotivatorVideo * newVideo = [NSEntityDescription insertNewObjectForEntityForName: @"FLMotivatorVideo" inManagedObjectContext:self.managedObjectContext];
+        newVideo.path = path;
+        [self.myChallenge addMotivatorsObject: newVideo];
         
         
     }
@@ -98,12 +126,38 @@
     {
         UIImage *pickedImage = [info objectForKey:UIImagePickerControllerEditedImage];
         NSData *data = UIImagePNGRepresentation(pickedImage);
-        NSString *FileName=[NSString stringWithFormat:@"image1.png"];
+        
+        NSUserDefaults * defaults = [NSUserDefaults standardUserDefaults];
+        NSNumber* currentIndex = [defaults objectForKey: @"imageIndex"];
+        
+        if (currentIndex)
+        {
+            int currentIndexInt = currentIndex.intValue;
+            currentIndexInt ++;
+            currentIndex = [NSNumber numberWithInt: currentIndexInt];
+        }
+        else
+        {
+            currentIndex = [NSNumber numberWithInt: 0];
+        }
+        
+        [defaults setObject: currentIndex forKey: @"imageIndex"];
+        [defaults synchronize];
+        
+        NSString * nameWithoutFileType = [currentIndex stringValue];
+        NSString * nameWithFileType = [nameWithoutFileType stringByAppendingPathComponent: @".png"];
+        
         NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
         NSString *documentsDirectory = [paths objectAtIndex:0];
-        NSString *tempPath = [documentsDirectory stringByAppendingPathComponent:FileName];
-        [data writeToFile:tempPath atomically:YES];
+        NSString *path = [documentsDirectory stringByAppendingPathComponent: nameWithFileType];
+        [data writeToFile: path atomically:YES];
         [picker dismissViewControllerAnimated:YES completion:nil];
+        
+        // core data
+        
+        FLMotivatorImage * newImage = [NSEntityDescription insertNewObjectForEntityForName: @"FLMotivatorImage" inManagedObjectContext:self.managedObjectContext];
+        newImage.path = path;
+        [self.myChallenge addMotivatorsObject: newImage];
     }
 }
 
