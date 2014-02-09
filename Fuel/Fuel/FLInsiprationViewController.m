@@ -7,6 +7,9 @@
 //
 
 #import "FLInsiprationViewController.h"
+#import "FLMotivatorImage.h"
+#import "FLMotivatorText.h"
+#import "FLMotivatorVideo.h"
 
 @interface FLInsiprationViewController ()
 
@@ -65,19 +68,72 @@
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString * identifier = @"ChallengeCell";
+    static NSString * cameraIdentifier = @"InspirationCameraCell";
+    static NSString * textIdentifier = @"InspirationTextCell";
     
-    UITableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:identifier];
+    FLMotivator * motivator = [self.fetchedResultsController objectAtIndexPath:indexPath];
     
+    UITableViewCell * cell;
+    
+    switch (motivator.type) {
+        case FLMotivatorTypeImage:
+        case FLMotivatorTypeVideo:
+            cell = [tableView dequeueReusableCellWithIdentifier:cameraIdentifier];
+            break;
+        case FLMotivatorTypeText:
+            cell = [tableView dequeueReusableCellWithIdentifier:textIdentifier];
+            break;
+        default:
+            break;
+    }
+    
+
     [self configureCell:cell atIndexPath:indexPath];
     
     return cell;
 }
 
+#define PLAY_TAG 100
+#define IMAGE_TAG 101
+#define DATE_TAG 102
+#define LABEL_TAG 100
+
+
 -(void) configureCell:(UITableViewCell * ) cell atIndexPath:(NSIndexPath *) indexPath
 {
-
+    FLMotivator * motivator = [self.fetchedResultsController objectAtIndexPath:indexPath];
+    
+    switch (motivator.type) {
+        case FLMotivatorTypeImage:
+        {
+            FLMotivatorImage * imageMotivator = (FLMotivatorImage *) motivator;
+            
+            UIImageView * imageView = (UIImageView *)[cell viewWithTag:IMAGE_TAG];
+            imageView.image = [FLGlobalHelper imageWithPath:imageMotivator.path];
+        
+        }
+            break;
+        case FLMotivatorTypeVideo:
+            break;
+        case FLMotivatorTypeText:
+        {
+            FLMotivatorText * textMotivator = (FLMotivatorText *) motivator;
+            UILabel * textLabel = (UILabel *)[cell viewWithTag:LABEL_TAG];
+            UILabel * dateLabel = (UILabel *)[cell viewWithTag:DATE_TAG];
+            textLabel.text = textMotivator.text;
+            
+            
+        }
+            break;
+            
+        default:
+            break;
+    }
 }
+
+
+
+
 
 #pragma mark - Fetched results Controller
 
@@ -97,11 +153,7 @@
         
         fetchRequest.fetchBatchSize = 20;
         fetchRequest.sortDescriptors = descriptors;
-        
-//        
-//        NSArray *array = [self.managedObjectContext executeFetchRequest:fetchRequest error:nil];
-//        
-//        NSLog(@"%d", array.count);
+
         
         //Make the fetch result controller
         NSFetchedResultsController * newFetchedResultsController = [[NSFetchedResultsController alloc]initWithFetchRequest:fetchRequest managedObjectContext:self.managedObjectContext sectionNameKeyPath:nil cacheName:nil];
