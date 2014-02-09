@@ -137,12 +137,9 @@
             FLMotivatorVideo * videoMotivator = (FLMotivatorVideo *) motivator;
             UIImageView * imageView = (UIImageView *)[cell viewWithTag:IMAGE_TAG];
             UIImageView * playView = (UIImageView *) [cell viewWithTag:PLAY_TAG];
-            UIImage *image = [self thumbnailFromVideoAtURL:[NSURL URLWithString:videoMotivator.path]];
-            NSLog(@"%@", videoMotivator.path);
-            NSLog(@"%@", image);
+            UIImage *image = [UIImage imageNamed:@"Video Placeholder"];
             image = [image resizedImage:CGSizeMake(300, 300) interpolationQuality:0];
             image = [image roundedCornerImage:5 borderSize:1];
-            NSLog(@"%@", image);
             imageView.image = image;
             playView.alpha = 1;
             
@@ -163,19 +160,6 @@
         default:
             break;
     }
-}
-
-- (UIImage *)thumbnailFromVideoAtURL:(NSURL *)url
-{
-    AVAsset *asset = [AVAsset assetWithURL:url];
-    AVAssetImageGenerator *imageGenerator = [[AVAssetImageGenerator alloc]initWithAsset:asset];
-    CMTime time = [asset duration];
-    time.value = 0;
-    CGImageRef imageRef = [imageGenerator copyCGImageAtTime:time actualTime:NULL error:NULL];
-    UIImage *thumbnail = [UIImage imageWithCGImage:imageRef];
-    CGImageRelease(imageRef);  // CGImageRef won't be released by ARC
-    
-    return thumbnail;
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
