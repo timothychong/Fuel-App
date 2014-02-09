@@ -11,5 +11,6 @@
 
 @implementation FLMotivatorImage
 
+@dynamic path;
 
 @end

@@ -8,9 +8,11 @@
 
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
+#import "FLMotivator.h"
 
 
-@interface FLMotivatorVideo : NSManagedObject
+@interface FLMotivatorVideo : FLMotivator
 
+@property (nonatomic, retain) NSString * path;
 
 @end
