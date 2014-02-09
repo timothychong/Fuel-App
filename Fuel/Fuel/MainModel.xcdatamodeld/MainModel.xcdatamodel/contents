@@ -20,11 +20,11 @@
     </entity>
     <entity name="FLMotivatorVideo" representedClassName="FLMotivatorVideo" parentEntity="FLMotivator" syncable="YES"/>
     <elements>
-        <element name="FLChallenge" positionX="160" positionY="192" width="128" height="103"/>
-        <element name="FLChallengeUpdate" positionX="-198" positionY="90" width="128" height="73"/>
-        <element name="FLMotivator" positionX="-18" positionY="171" width="128" height="58"/>
-        <element name="FLMotivatorImage" positionX="-9" positionY="180" width="128" height="43"/>
-        <element name="FLMotivatorVideo" positionX="0" positionY="189" width="128" height="43"/>
-        <element name="FLMotivatorText" positionX="9" positionY="198" width="128" height="43"/>
+        <element name="FLChallenge" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="FLChallengeUpdate" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="FLMotivator" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="FLMotivatorImage" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="FLMotivatorText" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="FLMotivatorVideo" positionX="0" positionY="0" width="0" height="0"/>
     </elements>
 </model>

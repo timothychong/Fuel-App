@@ -7,8 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "FLChallenge.h"
+#import "FLGenericViewController.h"
 
-@interface FLNewChallengeViewController : UIViewController <UITextFieldDelegate>
+@interface FLNewChallengeViewController : FLGenericViewController <UITextFieldDelegate>
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
+@property (nonatomic) FLChallenge * myChallenge;
+- (IBAction)cancelAddingChallenge:(id)sender;
 
 @end

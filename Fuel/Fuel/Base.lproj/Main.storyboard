@@ -23,7 +23,13 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="New Challenge" id="OTx-V3-7lp"/>
+                    <navigationItem key="navigationItem" title="New Challenge" id="OTx-V3-7lp">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="RYb-k3-GQQ">
+                            <connections>
+                                <action selector="cancelAddingChallenge:" destination="ieT-bn-Qnd" id="4nV-Cj-1Kf"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="scrollView" destination="je6-cs-sWO" id="M7M-yc-DIJ"/>
                     </connections>
@@ -112,7 +118,7 @@
                     <navigationItem key="navigationItem" title="Fuel" id="URx-17-kcl">
                         <barButtonItem key="rightBarButtonItem" title="Item" systemItem="add" id="Iky-SW-MZY">
                             <connections>
-                                <segue destination="MkW-Rw-Ffx" kind="modal" id="I4x-YJ-nd8"/>
+                                <segue destination="MkW-Rw-Ffx" kind="modal" identifier="NewChallenge" id="I4x-YJ-nd8"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

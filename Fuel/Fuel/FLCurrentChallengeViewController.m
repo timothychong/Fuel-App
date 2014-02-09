@@ -9,6 +9,7 @@
 #import "FLCurrentChallengeViewController.h"
 #import "FLAppDelegate.h"
 #import "FLChallengeCell.h"
+#import "FLNewChallengeViewController.h"
 
 #define CELL_HEIGHT 110
 
@@ -115,6 +116,21 @@
 -(void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+}
+
+#pragma mark - Segue
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.identifier isEqualToString:@"NewChallenge"]) {
+        UINavigationController* vc = segue.destinationViewController;
+        
+        NSArray *viewControllers = vc.viewControllers;
+        FLNewChallengeViewController * newvc = viewControllers[0];
+        newvc.myChallenge = [NSEntityDescription insertNewObjectForEntityForName:@"FLChallenge" inManagedObjectContext:self.managedObjectContext];
+        NSError * error;
+        [self.managedObjectContext save: &error];
+    }
 }
 
 @end
