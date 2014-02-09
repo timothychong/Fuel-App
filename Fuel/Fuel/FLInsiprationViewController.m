@@ -98,6 +98,7 @@
     
 
     [self configureCell:cell atIndexPath:indexPath];
+    [cell setNeedsUpdateConstraints];
     
     return cell;
 }
@@ -134,7 +135,6 @@
             break;
         case FLMotivatorTypeVideo:
         {
-            FLMotivatorVideo * videoMotivator = (FLMotivatorVideo *) motivator;
             UIImageView * imageView = (UIImageView *)[cell viewWithTag:IMAGE_TAG];
             UIImageView * playView = (UIImageView *) [cell viewWithTag:PLAY_TAG];
             UIImage *image = [UIImage imageNamed:@"Video Placeholder"];
@@ -161,6 +161,7 @@
             break;
     }
 }
+#pragma mark - UItableViewDelegate
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -192,6 +193,17 @@
     
     CGFloat height = [cell.contentView systemLayoutSizeFittingSize:UILayoutFittingCompressedSize].height;
     return height;
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    FLMotivator * motivator = [self.fetchedResultsController objectAtIndexPath:indexPath];
+    
+    if (motivator.type == FLMotivatorTypeVideo) {
+        [self presentVideoWithPath:((FLMotivatorVideo *) motivator).path];
+    }
+    
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
 #pragma mark - Fetched results Controller

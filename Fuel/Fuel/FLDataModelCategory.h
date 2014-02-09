@@ -33,11 +33,6 @@ typedef enum {
 @interface FLMotivator (FLDataModelCategory)
 
 -(NSString *) dateAddedString;
-
-@end
-
-@interface FLMotivator (FLDataModelCategory)
-
 -(FLMotivatorType) type;
 
 @end

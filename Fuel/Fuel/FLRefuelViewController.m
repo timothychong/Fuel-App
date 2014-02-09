@@ -7,6 +7,9 @@
 //
 
 #import "FLRefuelViewController.h"
+#import "FLMotivatorImage.h"
+#import "FLMotivatorText.h"
+#import "FLMotivatorVideo.h"
 
 @interface FLRefuelViewController ()
 
@@ -29,6 +32,17 @@
 	// Do any additional setup after loading the view.
     
     [self.backButton setImage:[UIImage imageNamed:@"Back Button - Selected"] forState: UIControlStateHighlighted];
+    
+    NSArray * array = [self.myChallenge.motivators allObjects];
+    int count = array.count;
+    if (!count) {
+        [self.navigationController popToRootViewControllerAnimated:YES];
+        return;
+    }
+    
+    int r = arc4random() % count;
+    FLMotivator * motivator = array[r];
+    
 }
 
 - (void)didReceiveMemoryWarning

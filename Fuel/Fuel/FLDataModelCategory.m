@@ -40,8 +40,8 @@
 {
     if (self.dateAdded) {
         NSDateFormatter * formatter =  [NSDateFormatter new];
-        formatter.dateFormat = @"Date Added: MMM d, yyyy";
-        return [formatter stringFromDate:self.dateAdded];
+        formatter.dateFormat = @"MMM d, yyyy";
+        return [NSString stringWithFormat:@"Date Added: %@",[formatter stringFromDate:self.dateAdded]];
     }else
         return @"Unknown Date Added";
 }
