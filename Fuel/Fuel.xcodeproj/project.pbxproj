@@ -21,6 +21,7 @@
 		9D0C038718A75920008392AA /* FLProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D0C038618A75920008392AA /* FLProgressView.m */; };
 		9D2DB90A18A7135B0097917F /* FLDetailChallengeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D2DB90918A7135B0097917F /* FLDetailChallengeViewController.m */; };
 		9D2DB90D18A715870097917F /* ChallengeDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9D2DB90C18A715870097917F /* ChallengeDetailView.xib */; };
+		9D3CB28A18A78CD500A493F4 /* FLInsiprationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D3CB28918A78CD500A493F4 /* FLInsiprationViewController.m */; };
 		9D4FACB818A6B9BF00A49636 /* MainModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9D4FACB618A6B9BF00A49636 /* MainModel.xcdatamodeld */; };
 		9D4FACCD18A6CBC300A49636 /* FLGenericViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D4FACCC18A6CBC300A49636 /* FLGenericViewController.m */; };
 		9D4FACCF18A6CBF600A49636 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D4FACCE18A6CBF600A49636 /* CoreData.framework */; };
@@ -83,6 +84,8 @@
 		9D2DB90818A7135B0097917F /* FLDetailChallengeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLDetailChallengeViewController.h; sourceTree = "<group>"; };
 		9D2DB90918A7135B0097917F /* FLDetailChallengeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLDetailChallengeViewController.m; sourceTree = "<group>"; };
 		9D2DB90C18A715870097917F /* ChallengeDetailView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChallengeDetailView.xib; sourceTree = "<group>"; };
+		9D3CB28818A78CD500A493F4 /* FLInsiprationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLInsiprationViewController.h; sourceTree = "<group>"; };
+		9D3CB28918A78CD500A493F4 /* FLInsiprationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLInsiprationViewController.m; sourceTree = "<group>"; };
 		9D4FACB718A6B9BF00A49636 /* MainModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MainModel.xcdatamodel; sourceTree = "<group>"; };
 		9D4FACCB18A6CBC300A49636 /* FLGenericViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLGenericViewController.h; sourceTree = "<group>"; };
 		9D4FACCC18A6CBC300A49636 /* FLGenericViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLGenericViewController.m; sourceTree = "<group>"; };
@@ -165,6 +168,15 @@
 				9D2DB90C18A715870097917F /* ChallengeDetailView.xib */,
 			);
 			name = "Detail Challenge";
+			sourceTree = "<group>";
+		};
+		9D3CB28718A78CAF00A493F4 /* Inspiration */ = {
+			isa = PBXGroup;
+			children = (
+				9D3CB28818A78CD500A493F4 /* FLInsiprationViewController.h */,
+				9D3CB28918A78CD500A493F4 /* FLInsiprationViewController.m */,
+			);
+			name = Inspiration;
 			sourceTree = "<group>";
 		};
 		9D4FACB518A6B95E00A49636 /* Data Model */ = {
@@ -272,6 +284,7 @@
 				9D023E8D18A73AFA00A00914 /* Refuel */,
 				9D4FACD918A6F58D00A49636 /* Current Challenge */,
 				9D4FACD218A6E83300A49636 /* Back end */,
+				9D3CB28718A78CAF00A493F4 /* Inspiration */,
 				9D4FACB518A6B95E00A49636 /* Data Model */,
 				9DFECF1818A5DDFC00BD49DC /* Images.xcassets */,
 				9DFECF0718A5DDFC00BD49DC /* Supporting Files */,
@@ -457,6 +470,7 @@
 				9D2DB90A18A7135B0097917F /* FLDetailChallengeViewController.m in Sources */,
 				1790D28418A7129300D084E4 /* FLMotivatorImage.m in Sources */,
 				1790D28718A7129300D084E4 /* FLMotivatorText.m in Sources */,
+				9D3CB28A18A78CD500A493F4 /* FLInsiprationViewController.m in Sources */,
 				9DFECF1118A5DDFC00BD49DC /* FLAppDelegate.m in Sources */,
 				9D4FACCD18A6CBC300A49636 /* FLGenericViewController.m in Sources */,
 				9D4FACD518A6E8C600A49636 /* FLGlobalHelper.m in Sources */,

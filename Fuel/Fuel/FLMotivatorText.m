@@ -13,4 +13,8 @@
 
 @dynamic text;
 
+-(FLMotivatorType)type
+{
+    return FLMotivatorTypeText;
+}
 @end

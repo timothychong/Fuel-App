@@ -8,9 +8,7 @@
 
 #import "FLDetailChallengeViewController.h"
 #import "FLRefuelViewController.h"
-#import <MediaPlayer/MediaPlayer.h>
-#import <MobileCoreServices/UTCoreTypes.h>
-#import <AssetsLibrary/AssetsLibrary.h>
+#import "FLInsiprationViewController.h"
 
 @interface FLDetailChallengeViewController ()
 
@@ -68,6 +66,12 @@
 
 - (IBAction)showInspiration:(id)sender {
     
+    UIStoryboard * st = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    
+    FLDetailChallengeViewController * dvc = [st instantiateViewControllerWithIdentifier:@"InspirationController"];
+    dvc.myChallenge = self.myChallenge;
+    [self.navigationController pushViewController:dvc animated:YES];
+
     
 }
 

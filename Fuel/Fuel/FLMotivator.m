@@ -14,4 +14,16 @@
 
 @dynamic challenge;
 
+
+
+
+
+-(FLMotivatorType)type
+{
+    [NSException raise:@"FLMotivator Error" format:@"Motivator is an abstract class"];
+    return FLMotivatorTypeImage;
+}
+
+
+
 @end

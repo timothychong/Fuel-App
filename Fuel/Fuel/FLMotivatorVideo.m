@@ -13,4 +13,9 @@
 
 @dynamic path;
 
+-(FLMotivatorType)type
+{
+    return FLMotivatorTypeVideo;
+}
+
 @end

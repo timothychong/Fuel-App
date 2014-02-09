@@ -239,7 +239,7 @@
                     <navigationItem key="navigationItem" title="Challenge" id="fCg-of-ASM"/>
                     <connections>
                         <outlet property="scrollView" destination="FLL-JM-r4J" id="bat-rX-MIg"/>
-                        <segue destination="nTZ-2O-jcD" kind="push" id="fj9-Q7-nFn"/>
+                        <segue destination="nTZ-2O-jcD" kind="push" identifier="InspiratinoSegue" id="fj9-Q7-nFn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="B3P-jN-Ycb" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -296,8 +296,8 @@
                                 <color key="textColor" red="0.97532105445861816" green="0.28879678249359131" blue="0.21731527149677277" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Navigation_TopMenuBar" translatesAutoresizingMaskIntoConstraints="NO" id="vx0-TV-GHe">
-                                <rect key="frame" x="0.0" y="238" width="320" height="64"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Navigation_TopMenuBar" translatesAutoresizingMaskIntoConstraints="NO" id="vx0-TV-GHe">
+                                <rect key="frame" x="0.0" y="238" width="319" height="64"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="boO-5P-DEr" userLabel="Bar2">
@@ -338,8 +338,8 @@
                                     <action selector="goBack:" destination="1Dq-DZ-iYC" eventType="touchUpInside" id="i6k-fE-gX9"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gsw-Tc-gs0">
-                                <rect key="frame" x="279" y="34" width="30" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gsw-Tc-gs0">
+                                <rect key="frame" x="278" y="34" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="bhY-qq-GsY"/>
@@ -393,10 +393,10 @@
             </objects>
             <point key="canvasLocation" x="1968" y="584"/>
         </scene>
-        <!--View Controller - Inspirations-->
+        <!--Insipration View Controller - Inspirations-->
         <scene sceneID="V75-eF-6og">
             <objects>
-                <viewController id="nTZ-2O-jcD" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="InspirationController" id="nTZ-2O-jcD" customClass="FLInsiprationViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="xVI-Z1-sEr"/>
                         <viewControllerLayoutGuide type="bottom" id="pa4-xe-ngk"/>
@@ -483,11 +483,18 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="nTZ-2O-jcD" id="Se9-xO-ocF"/>
+                                    <outlet property="delegate" destination="nTZ-2O-jcD" id="rn4-71-336"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Inspirations" id="QrQ-D7-MIB"/>
+                    <connections>
+                        <outlet property="tableView" destination="sCY-zy-rOz" id="FwB-2D-X9T"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YRP-qG-iVs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

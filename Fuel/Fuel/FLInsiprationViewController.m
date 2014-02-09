@@ -1,51 +1,43 @@
 //
-//  FLViewController.m
+//  FLInsiprationViewController.m
 //  Fuel
 //
-//  Created by Timothy Chong on 2/7/14.
+//  Created by Timothy Chong on 2/9/14.
 //  Copyright (c) 2014 Fuel. All rights reserved.
 //
 
-#import "FLCurrentChallengeViewController.h"
-#import "FLAppDelegate.h"
-#import "FLChallengeCell.h"
-#import "FLNewChallengeViewController.h"
-#import "FLDetailChallengeViewController.h"
+#import "FLInsiprationViewController.h"
 
-#define CELL_HEIGHT 110
+@interface FLInsiprationViewController ()
 
-@interface FLCurrentChallengeViewController ()
 @property (nonatomic) NSFetchedResultsController * fetchedResultsController;
+
 @end
 
-@implementation FLCurrentChallengeViewController
+@implementation FLInsiprationViewController
+
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+{
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    if (self) {
+        // Custom initialization
+    }
+    return self;
+    
+}
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
-    
-    
-    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-    self.tableView.backgroundColor = [UIColor colorWithRed:244/255.0 green:244/255.0 blue:244/255.0 alpha:1];
-    
-    NSError *error = nil;
+	// Do any additional setup after loading the view.
+    NSError * error;
     
     //Setup fetch result controller
     if (![self.fetchedResultsController performFetch:&error]) {
         NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
         abort();
     }
- 
 }
-
--(void)viewWillAppear:(BOOL)animated
-{
-    [super viewWillAppear:animated];
-
-    
-}
-
 
 - (void)didReceiveMemoryWarning
 {
@@ -53,7 +45,7 @@
     // Dispose of any resources that can be recreated.
 }
 
-#pragma mark - UITableViewDatasource
+#pragma mark - UITableViewDataSource
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
@@ -75,26 +67,17 @@
 {
     static NSString * identifier = @"ChallengeCell";
     
-   FLChallengeCell * cell = [tableView dequeueReusableCellWithIdentifier:identifier];
+    UITableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:identifier];
+    
     [self configureCell:cell atIndexPath:indexPath];
     
     return cell;
 }
 
-
--(void) configureCell:(FLChallengeCell * ) cell atIndexPath:(NSIndexPath *) indexPath
+-(void) configureCell:(UITableViewCell * ) cell atIndexPath:(NSIndexPath *) indexPath
 {
-    FLChallenge * challenge = [self.fetchedResultsController objectAtIndexPath:indexPath];
-    cell.titleLabel.text = challenge.title;
-    cell.dayLeftLabel.text = challenge.dayLeftString;
-    cell.progressView.progress = [challenge percentFinished];
-}
 
--(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    return CELL_HEIGHT;
 }
-
 
 #pragma mark - Fetched results Controller
 
@@ -105,14 +88,20 @@
         //Create fetch Request
         NSFetchRequest * fetchRequest = [[NSFetchRequest alloc]init];
         
-        NSEntityDescription * entity = [NSEntityDescription entityForName:@"FLChallenge" inManagedObjectContext:self.managedObjectContext];
+        NSEntityDescription * entity = [NSEntityDescription entityForName:@"FLMotivator" inManagedObjectContext:self.managedObjectContext];
         [fetchRequest setEntity:entity];
+        fetchRequest.predicate = [NSPredicate predicateWithFormat:@"challenge = %@", self.myChallenge];
         
         //Set up initial sorting
-        NSArray * descriptors = @[]; //@[[[NSSortDescriptor alloc]initWithKey:@"groupName" ascending:YES]];
+        NSArray * descriptors = @[[[NSSortDescriptor alloc]initWithKey:@"dateAdded" ascending:YES]];
         
         fetchRequest.fetchBatchSize = 20;
         fetchRequest.sortDescriptors = descriptors;
+        
+//        
+//        NSArray *array = [self.managedObjectContext executeFetchRequest:fetchRequest error:nil];
+//        
+//        NSLog(@"%d", array.count);
         
         //Make the fetch result controller
         NSFetchedResultsController * newFetchedResultsController = [[NSFetchedResultsController alloc]initWithFetchRequest:fetchRequest managedObjectContext:self.managedObjectContext sectionNameKeyPath:nil cacheName:nil];
@@ -147,7 +136,7 @@
             break;
             
         case NSFetchedResultsChangeUpdate:
-            [self configureCell:(FLChallengeCell *)[tableView cellForRowAtIndexPath:indexPath] atIndexPath:indexPath];
+            [self configureCell:[tableView cellForRowAtIndexPath:indexPath] atIndexPath:indexPath];
             break;
             
         case NSFetchedResultsChangeMove:
@@ -177,45 +166,10 @@
 
 - (void)controllerDidChangeContent:(NSFetchedResultsController *)controller {
     // The fetch controller has sent all current change notifications, so tell the table view to process all updates.
-        [self.tableView endUpdates];
+    [self.tableView endUpdates];
     
 }
 
-#pragma mark - UITableViewDelegate
 
--(void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    UIStoryboard * st = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-    
-    FLDetailChallengeViewController * dvc = [st instantiateViewControllerWithIdentifier:@"ChallengeDetailView"];
-    dvc.myChallenge = [self.fetchedResultsController objectAtIndexPath:indexPath];
-    [self.navigationController pushViewController:dvc animated:YES];
-    [tableView deselectRowAtIndexPath:indexPath animated:YES];
-}
-
--(void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        FLChallenge * challenge = [self.fetchedResultsController objectAtIndexPath:indexPath];
-        
-        [self.managedObjectContext deleteObject:challenge];
-        NSError * error;
-        [self.managedObjectContext save:&error];
-        [self.navigationController popViewControllerAnimated:YES];
-    }
-}
-
-//#pragma mark - Segue
-//
-//-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-//{
-//    if ([segue.identifier isEqualToString:@"NewChallenge"]) {
-//        
-//        UINavigationController* vc = segue.destinationViewController;
-//        NSArray *viewControllers = vc.viewControllers;
-//        FLNewChallengeViewController * newvc = viewControllers[0];
-//
-//    }
-//}
 
 @end

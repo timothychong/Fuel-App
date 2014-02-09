@@ -9,10 +9,20 @@
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
 
+typedef enum {
+    FLMotivatorTypeText,
+    FLMotivatorTypeImage,
+    FLMotivatorTypeVideo
+} FLMotivatorType;
+
+
 @class FLChallenge;
 
 @interface FLMotivator : NSManagedObject
 
 @property (nonatomic, retain) FLChallenge *challenge;
+
+
+-(FLMotivatorType) type;
 
 @end
