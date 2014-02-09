@@ -8,6 +8,7 @@
 
 #import "FLCurrentChallengeViewController.h"
 #import "FLAppDelegate.h"
+#import "FLChallengeCell.h"
 
 #define CELL_HEIGHT 110
 
@@ -35,7 +36,6 @@
         abort();
     }
     
-    [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"Navigation_TopMenuBar"] forBarMetrics:UIBarMetricsDefault];
 }
 
 - (void)didReceiveMemoryWarning
@@ -66,9 +66,12 @@
 {
     static NSString * identifier = @"ChallengeCell";
     
-    UITableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:identifier];
+   FLChallengeCell * cell = [tableView dequeueReusableCellWithIdentifier:identifier];
     
+    FLChallenge * challenge = [self.fetchedResultsController objectAtIndexPath:indexPath];
     
+    cell.titleLabel.text = challenge.title;
+    cell.dayLeftLabel.text = challenge.dayLeftString;
     
     return cell;
 }

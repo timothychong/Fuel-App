@@ -35,18 +35,18 @@ static FLGlobalHelper * defaultGlobalHelper = nil;
     
     FLChallenge * challenege = [NSEntityDescription insertNewObjectForEntityForName:@"FLChallenge" inManagedObjectContext:self.managedObjectContext];
     challenege.startDate = [NSDate new];
-    challenege.duration = @(60 * 60 * 24 * 15);
+    challenege.endDate = [NSDate dateWithTimeInterval:60 * 60 * 24 sinceDate:[NSDate new]];
     challenege.title = @"Finish Hackathon";
     
     FLChallenge * challenege1 = [NSEntityDescription insertNewObjectForEntityForName:@"FLChallenge" inManagedObjectContext:self.managedObjectContext];
     
-    challenege1.duration = @(60 * 60 * 24 * 20);
+    challenege1.endDate = [NSDate dateWithTimeInterval:60 * 60 * 24 * 3 sinceDate:[NSDate new]];
     challenege1.startDate = [NSDate new];
-    challenege.title = @"Mount Everest";
+    challenege1.title = @"Mount Everest";
     
     FLChallenge * challenege2 = [NSEntityDescription insertNewObjectForEntityForName:@"FLChallenge" inManagedObjectContext:self.managedObjectContext];
     challenege2.startDate = [NSDate new];
-    challenege2.duration = @(60 * 60 * 24 * 30);
+    challenege2.endDate = [NSDate dateWithTimeInterval:60 * 60 * 24 * 4 sinceDate:[NSDate new]];
     challenege2.title = @"Finish Degree";
     
     

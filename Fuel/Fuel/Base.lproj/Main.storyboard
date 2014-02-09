@@ -4,6 +4,34 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
     </dependencies>
     <scenes>
+        <!--New Challenge View Controller - New Challenge-->
+        <scene sceneID="UZl-DA-xJQ">
+            <objects>
+                <viewController id="ieT-bn-Qnd" customClass="FLNewChallengeViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="V0k-en-w3X"/>
+                        <viewControllerLayoutGuide type="bottom" id="wzB-GE-Ns0"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Lxz-An-NpB">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="je6-cs-sWO">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="New Challenge" id="OTx-V3-7lp"/>
+                    <connections>
+                        <outlet property="scrollView" destination="je6-cs-sWO" id="M7M-yc-DIJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Lbz-xY-unU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1823" y="-173"/>
+        </scene>
         <!--Current Challenge View Controller - Fuel-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
@@ -82,7 +110,11 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Fuel" id="URx-17-kcl">
-                        <barButtonItem key="rightBarButtonItem" title="Item" systemItem="add" id="Iky-SW-MZY"/>
+                        <barButtonItem key="rightBarButtonItem" title="Item" systemItem="add" id="Iky-SW-MZY">
+                            <connections>
+                                <segue destination="MkW-Rw-Ffx" kind="modal" id="I4x-YJ-nd8"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="0ST-Cr-ieu" id="Rzz-eF-CPx"/>
@@ -202,6 +234,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="T5W-Bx-gC5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="531" y="142"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="3YY-h9-P0m">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="MkW-Rw-Ffx" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="kgK-Ku-L0i">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="ieT-bn-Qnd" kind="relationship" relationship="rootViewController" id="jRG-FO-Dbh"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rye-9z-KoY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1368" y="-173"/>
         </scene>
     </scenes>
     <resources>

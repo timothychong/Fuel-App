@@ -14,8 +14,8 @@
 @implementation FLChallenge
 
 @dynamic title;
-@dynamic duration;
 @dynamic startDate;
+@dynamic endDate;
 @dynamic updates;
 @dynamic motivators;
 
