@@ -31,6 +31,7 @@ static FLGlobalHelper * defaultGlobalHelper = nil;
 
 -(void)defaultSetup
 {
+    return;
     [self deleteAllChallenges];
     
     FLChallenge * challenege = [NSEntityDescription insertNewObjectForEntityForName:@"FLChallenge" inManagedObjectContext:self.managedObjectContext];
