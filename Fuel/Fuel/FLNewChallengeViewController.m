@@ -49,4 +49,10 @@
     return YES;
 }
 
+- (IBAction)cancelAddingChallenge:(id)sender {
+    [self.managedObjectContext deleteObject:self.myChallenge];
+    NSError * error;
+    [self.managedObjectContext save:&error];
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
 @end
