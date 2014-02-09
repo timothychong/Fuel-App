@@ -42,6 +42,15 @@
     self.progressView.progress = [self.myChallenge percentFinished];
 }
 
+-(void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    if (self.myChallenge.motivators.count) {
+        self.refuelButton.enabled = YES;
+    }else
+        self.refuelButton.enabled = NO;
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];

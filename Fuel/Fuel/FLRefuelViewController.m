@@ -10,6 +10,7 @@
 #import "FLMotivatorImage.h"
 #import "FLMotivatorText.h"
 #import "FLMotivatorVideo.h"
+#import <UIImage-Categories/UIImage+Resize.h>
 
 @interface FLRefuelViewController ()
 @property (nonatomic) FLMotivator * myMotivator;
@@ -52,6 +53,22 @@
     NSTimeInterval difference = [[NSDate new] timeIntervalSinceDate:dateAdded];
     int days = difference / 60 / 24 / 60;
     self.daysAgoLabel.text = [NSString stringWithFormat:@"%d", days];
+    
+    
+    switch ([self.myMotivator type]) {
+        case FLMotivatorTypeText:
+            
+            break;
+        case FLMotivatorTypeImage:
+            self.imageView.image = [[FLGlobalHelper imageWithPath:((FLMotivatorImage *)self.myMotivator).path] resizedImage:CGSizeMake(300, 300) interpolationQuality:0];
+            self.playButton.alpha = 0;
+            break;
+        case FLMotivatorTypeVideo:
+            break;
+        default:
+            break;
+    }
+
 }
 
 - (void)didReceiveMemoryWarning

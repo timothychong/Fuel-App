@@ -16,5 +16,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *daysAgoLabel;
 @property (weak, nonatomic) IBOutlet UILabel *daysLeftLabel;
 @property (weak, nonatomic) IBOutlet FLProgressView *progressView;
+@property (weak, nonatomic) IBOutlet UIImageView *imageView;
+@property (weak, nonatomic) IBOutlet UIImageView *playButton;
 @property (nonatomic) FLChallenge * myChallenge;
 @end
