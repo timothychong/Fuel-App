@@ -71,8 +71,7 @@
 {
     switch (buttonIndex) {
         case 0:{
-            
-            [self.managedObjectContext delete:self.myChallenge];
+            [self.managedObjectContext deleteObject:self.myChallenge];
             NSError * error;
             [self.managedObjectContext save:&error];
             [self.navigationController popViewControllerAnimated:YES];

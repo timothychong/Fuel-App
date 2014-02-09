@@ -193,6 +193,18 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
+-(void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        FLChallenge * challenge = [self.fetchedResultsController objectAtIndexPath:indexPath];
+        
+        [self.managedObjectContext deleteObject:challenge];
+        NSError * error;
+        [self.managedObjectContext save:&error];
+        [self.navigationController popViewControllerAnimated:YES];
+    }
+}
+
 #pragma mark - Segue
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
