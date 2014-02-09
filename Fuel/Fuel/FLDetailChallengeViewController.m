@@ -68,9 +68,14 @@
 -(void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
 {
     switch (buttonIndex) {
-        case 1:
+        case 0:{
+            
+            [self.managedObjectContext delete:self.myChallenge];
+            NSError * error;
+            [self.managedObjectContext save:&error];
             [self.navigationController popViewControllerAnimated:YES];
             break;
+        }
         default:
             break;
     }
