@@ -13,10 +13,5 @@
 
 @dynamic path;
 
--(FLMotivatorType)type
-{
-    return FLMotivatorTypeImage;
-}
-
 
 @end

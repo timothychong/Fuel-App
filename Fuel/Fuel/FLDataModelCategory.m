@@ -31,4 +31,52 @@
     
     return partialInterval / entireInterval;
 }
+
+@end
+
+@implementation FLMotivator (FLDataModelCategory)
+
+-(NSString *)dateAddedString
+{
+    if (self.dateAdded) {
+        NSDateFormatter * formatter =  [NSDateFormatter new];
+        formatter.dateFormat = @"Date Added: MMM d, yyyy";
+        return [formatter stringFromDate:self.dateAdded];
+    }else
+        return @"Unknown Date Added";
+}
+-(FLMotivatorType)type
+{
+    [NSException raise:@"FLMotivator Error" format:@"Undetermined type"];
+    return FLMotivatorTypeText;
+}
+
+@end
+
+
+@implementation FLMotivatorText (FLDataModelCategory)
+
+-(FLMotivatorType)type
+{
+    return FLMotivatorTypeText;
+}
+
+@end
+
+@implementation FLMotivatorImage (FLDataModelCategory)
+
+-(FLMotivatorType)type
+{
+    return FLMotivatorTypeImage;
+}
+
+@end
+
+@implementation FLMotivatorVideo (FLDataModelCategory)
+
+-(FLMotivatorType)type
+{
+    return FLMotivatorTypeVideo;
+}
+
 @end

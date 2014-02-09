@@ -103,13 +103,22 @@
 {
     FLMotivator * motivator = [self.fetchedResultsController objectAtIndexPath:indexPath];
     
+    
+    UILabel * dateLabel = (UILabel *)[cell viewWithTag:DATE_TAG];
+    dateLabel.text = [motivator dateAddedString];
+    
+    
     switch (motivator.type) {
         case FLMotivatorTypeImage:
         {
             FLMotivatorImage * imageMotivator = (FLMotivatorImage *) motivator;
             
             UIImageView * imageView = (UIImageView *)[cell viewWithTag:IMAGE_TAG];
+            UIImageView * playView = (UIImageView *) [cell viewWithTag:PLAY_TAG];
+            NSLog(@"%@", imageMotivator.path);
+            NSLog(@"%@", [FLGlobalHelper imageWithPath:imageMotivator.path]);
             imageView.image = [FLGlobalHelper imageWithPath:imageMotivator.path];
+            playView.image = nil;
         
         }
             break;
@@ -119,9 +128,9 @@
         {
             FLMotivatorText * textMotivator = (FLMotivatorText *) motivator;
             UILabel * textLabel = (UILabel *)[cell viewWithTag:LABEL_TAG];
-            UILabel * dateLabel = (UILabel *)[cell viewWithTag:DATE_TAG];
             textLabel.text = textMotivator.text;
-            
+            textLabel.lineBreakMode = NSLineBreakByWordWrapping;
+            textLabel.numberOfLines = 0;
             
         }
             break;
@@ -130,10 +139,38 @@
             break;
     }
 }
-
-
-
-
+//
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    static NSString * cameraIdentifier = @"InspirationCameraCell";
+    static NSString * textIdentifier = @"InspirationTextCell";
+    
+    FLMotivator * motivator = [self.fetchedResultsController objectAtIndexPath:indexPath];
+    
+    UITableViewCell * cell;
+    
+    switch (motivator.type) {
+        case FLMotivatorTypeImage:
+        case FLMotivatorTypeVideo:
+            cell = [tableView dequeueReusableCellWithIdentifier:cameraIdentifier];
+            break;
+        case FLMotivatorTypeText:
+            cell = [tableView dequeueReusableCellWithIdentifier:textIdentifier];
+            break;
+        default:
+            break;
+    }
+    
+    [self configureCell:cell atIndexPath:indexPath];
+    
+    [cell setNeedsUpdateConstraints];
+    [cell updateConstraintsIfNeeded];
+    [cell.contentView setNeedsLayout];
+    [cell.contentView layoutIfNeeded];
+    
+    CGFloat height = [cell.contentView systemLayoutSizeFittingSize:UILayoutFittingCompressedSize].height;
+    return height;
+}
 
 #pragma mark - Fetched results Controller
 

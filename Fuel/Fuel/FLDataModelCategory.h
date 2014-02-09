@@ -8,6 +8,16 @@
 
 #import <Foundation/Foundation.h>
 #import "FLChallenge.h"
+#import "FLMotivator.h"
+#import "FLMotivatorText.h"
+#import "FLMotivatorImage.h"
+#import "FLMotivatorVideo.h"
+
+typedef enum {
+    FLMotivatorTypeText,
+    FLMotivatorTypeImage,
+    FLMotivatorTypeVideo
+}FLMotivatorType;
 
 @interface FLDataModelCategory : NSObject
 
@@ -17,5 +27,17 @@
 
 -(NSString *) dayLeftString;
 -(CGFloat) percentFinished;
+
+@end
+
+@interface FLMotivator (FLDataModelCategory)
+
+-(NSString *) dateAddedString;
+
+@end
+
+@interface FLMotivator (FLDataModelCategory)
+
+-(FLMotivatorType) type;
 
 @end

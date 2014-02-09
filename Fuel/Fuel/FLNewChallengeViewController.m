@@ -51,11 +51,7 @@
 {
     [super viewDidAppear:animated];
     
-    self.myChallenge = [NSEntityDescription insertNewObjectForEntityForName:@"FLChallenge" inManagedObjectContext:self.managedObjectContext];
-    NSError * error;
-    [self.managedObjectContext save: &error];
 }
-
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -162,7 +158,7 @@
         [defaults synchronize];
         
         NSString * nameWithoutFileType = [currentIndex stringValue];
-        NSString * nameWithFileType = [nameWithoutFileType stringByAppendingPathComponent: @".mp4"];
+        NSString * nameWithFileType = [NSString stringWithFormat:@"%@.mp4", nameWithoutFileType];
         NSArray * paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
         NSString * documentsDirectory = [paths objectAtIndex:0];
         NSString * path = [documentsDirectory stringByAppendingPathComponent:nameWithFileType];
@@ -174,8 +170,8 @@
         FLMotivatorVideo * newVideo = [NSEntityDescription insertNewObjectForEntityForName: @"FLMotivatorVideo" inManagedObjectContext:self.managedObjectContext];
         newVideo.path = path;
         [self.myChallenge addMotivatorsObject: newVideo];
-        
-        
+        NSError * error;
+        [self.managedObjectContext save:&error];
     }
     else
     {
@@ -200,7 +196,7 @@
         [defaults synchronize];
         
         NSString * nameWithoutFileType = [currentIndex stringValue];
-        NSString * nameWithFileType = [nameWithoutFileType stringByAppendingPathComponent: @".png"];
+        NSString * nameWithFileType = [NSString stringWithFormat:@"%@.png", nameWithoutFileType];
         
         NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
         NSString *documentsDirectory = [paths objectAtIndex:0];
@@ -213,6 +209,8 @@
         FLMotivatorImage * newImage = [NSEntityDescription insertNewObjectForEntityForName: @"FLMotivatorImage" inManagedObjectContext:self.managedObjectContext];
         newImage.path = path;
         [self.myChallenge addMotivatorsObject: newImage];
+        NSError * error;
+        [self.managedObjectContext save:&error];
     }
 }
 
@@ -225,6 +223,9 @@
     [self.scrollView addSubview:view];
     self.scrollView.contentSize = view.frame.size;
     self.scrollView.scrollEnabled = YES;
+    self.myChallenge = [NSEntityDescription insertNewObjectForEntityForName:@"FLChallenge" inManagedObjectContext:self.managedObjectContext];
+    NSError * error;
+    [self.managedObjectContext save: &error];
 }
 
 - (void)didReceiveMemoryWarning
