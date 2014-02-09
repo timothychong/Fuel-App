@@ -8,7 +8,9 @@
 
 #import "FLDetailChallengeViewController.h"
 #import "FLRefuelViewController.h"
-
+#import <MediaPlayer/MediaPlayer.h>
+#import <MobileCoreServices/UTCoreTypes.h>
+#import <AssetsLibrary/AssetsLibrary.h>
 
 @interface FLDetailChallengeViewController ()
 
