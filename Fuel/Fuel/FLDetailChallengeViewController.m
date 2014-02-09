@@ -7,6 +7,8 @@
 //
 
 #import "FLDetailChallengeViewController.h"
+#import "FLRefuelViewController.h"
+
 
 @interface FLDetailChallengeViewController ()
 
@@ -47,6 +49,10 @@
 
 - (IBAction)refuel:(id)sender {
     
+    UIStoryboard * st = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    FLDetailChallengeViewController * dvc = [st instantiateViewControllerWithIdentifier:@"FLRefuelViewController"];
+    dvc.myChallenge = self.myChallenge;
+    [self presentViewController:dvc animated:YES completion:nil];
     
 }
 @end
