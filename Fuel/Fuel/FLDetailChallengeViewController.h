@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "FLChallenge.h"
+#import "FLGenericViewController.h"
 
-@interface FLDetailChallengeViewController : UIViewController <UIActionSheetDelegate>
+@interface FLDetailChallengeViewController : FLGenericViewController <UIActionSheetDelegate>
 
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (nonatomic) FLChallenge * myChallenge;

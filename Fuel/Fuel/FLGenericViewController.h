@@ -12,6 +12,9 @@
 @interface FLGenericViewController : UIViewController
 
 @property (nonatomic) NSManagedObjectContext * managedObjectContext;
+
+
+-(void) presentVideoWithPath:(NSString *) str;
 @end
 
 @implementation UINavigationBar (UINavigationBarCategory)

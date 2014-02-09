@@ -8,7 +8,9 @@
 
 #import "FLDetailChallengeViewController.h"
 #import "FLRefuelViewController.h"
-
+#import <MediaPlayer/MediaPlayer.h>
+#import <MobileCoreServices/UTCoreTypes.h>
+#import <AssetsLibrary/AssetsLibrary.h>
 
 @interface FLDetailChallengeViewController ()
 
@@ -68,9 +70,14 @@
 -(void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
 {
     switch (buttonIndex) {
-        case 1:
+        case 0:{
+            
+            [self.managedObjectContext delete:self.myChallenge];
+            NSError * error;
+            [self.managedObjectContext save:&error];
             [self.navigationController popViewControllerAnimated:YES];
             break;
+        }
         default:
             break;
     }

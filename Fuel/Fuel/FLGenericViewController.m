@@ -8,13 +8,29 @@
 
 #import "FLGenericViewController.h"
 #import "FLAppDelegate.h"
+#import <MediaPlayer/MediaPlayer.h>
+#import <MobileCoreServices/UTCoreTypes.h>
+#import <AssetsLibrary/AssetsLibrary.h>
 
 @interface FLGenericViewController ()
 
 @end
 
+
 @implementation FLGenericViewController
 
+-(void) presentVideoWithPath:(NSString *) str
+{
+    
+    NSURL *url = [NSURL fileURLWithPath:str];
+    
+    MPMoviePlayerViewController *moviePlayer = [[MPMoviePlayerViewController alloc] initWithContentURL: url];
+    moviePlayer.moviePlayer.controlStyle = MPMovieControlStyleNone;
+    moviePlayer.moviePlayer.scalingMode = MPMovieScalingModeFill;
+    [self presentViewController:moviePlayer animated:NO completion:^{
+    }];
+    
+}
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
