@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "FLChallenge.h"
 #import "FLGenericViewController.h"
+#import "FLProgressView.h"
 
 @interface FLDetailChallengeViewController : FLGenericViewController <UIActionSheetDelegate>
 
@@ -17,6 +18,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UIButton *refuelButton;
 @property (weak, nonatomic) IBOutlet UILabel *timeLeftLabel;
+@property (weak, nonatomic) IBOutlet FLProgressView *progressView;
 @property (weak, nonatomic) IBOutlet UILabel *numberLabel;
 - (IBAction)refuel:(id)sender;
 - (IBAction)removeFuel:(id)sender;
