@@ -12,7 +12,9 @@
 
 @interface FLNewChallengeViewController : FLGenericViewController <UITextFieldDelegate>
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
+@property (weak, nonatomic) IBOutlet UITextField *goalNameTextField;
 @property (nonatomic) FLChallenge * myChallenge;
 - (IBAction)cancelAddingChallenge:(id)sender;
+- (IBAction)textfieldSelected:(id)sender;
 
 @end
