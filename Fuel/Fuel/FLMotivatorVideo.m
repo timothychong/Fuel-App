@@ -11,5 +11,6 @@
 
 @implementation FLMotivatorVideo
 
+@dynamic path;
 
 @end
