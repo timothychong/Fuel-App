@@ -59,10 +59,13 @@
         case FLMotivatorTypeText:
             
             break;
-        case FLMotivatorTypeImage:
+        case FLMotivatorTypeImage:{
             self.imageView.image = [[FLGlobalHelper imageWithPath:((FLMotivatorImage *)self.myMotivator).path] resizedImage:CGSizeMake(300, 300) interpolationQuality:0];
             self.playButton.alpha = 0;
-            ((UIScrollView *)self.view).scrollEnabled = YES;
+            UIScrollView * sv = ((UIScrollView *) self.view);
+            sv.scrollEnabled = YES;
+            sv.contentSize = ((UIView*)sv.subviews[0]).frame.size;
+        }
             break;
         case FLMotivatorTypeVideo:
             break;

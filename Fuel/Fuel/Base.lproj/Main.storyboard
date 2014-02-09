@@ -246,176 +246,6 @@
             </objects>
             <point key="canvasLocation" x="1368" y="678"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="79f-6O-rUh">
-            <objects>
-                <viewController id="1Dq-DZ-iYC" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="tvn-aT-cPm"/>
-                        <viewControllerLayoutGuide type="bottom" id="yZ4-99-Shp"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="1QH-Wu-Q8V">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="c16-CO-XKK" userLabel="Bar1">
-                                <rect key="frame" x="0.0" y="152" width="320" height="1"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <color key="backgroundColor" red="0.75497359037399292" green="0.77878028154373169" blue="0.81490927934646606" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="1" id="w5c-tM-Hde"/>
-                                </constraints>
-                            </view>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mBa-KA-aUG">
-                                <rect key="frame" x="286" y="38" width="14" height="22"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="X-Out Icon">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="goBack:" destination="1Dq-DZ-iYC" eventType="touchUpInside" id="sXZ-SP-1nl"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Need to refuel?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wcy-eE-zzS">
-                                <rect key="frame" x="75" y="75" width="170" height="33"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="24"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="days ago you added this fuel" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8jR-wc-9YE">
-                                <rect key="frame" x="85" y="111" width="161" height="15"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="6" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GgJ-kB-ISA">
-                                <rect key="frame" x="76" y="111" width="7" height="15"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                <color key="textColor" red="0.97532105445861816" green="0.28879678249359131" blue="0.21731527149677277" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Back Button" translatesAutoresizingMaskIntoConstraints="NO" id="vx0-TV-GHe">
-                                <rect key="frame" x="66" y="173" width="189" height="53"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="boO-5P-DEr" userLabel="Bar2">
-                                <rect key="frame" x="0.0" y="266" width="320" height="1"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <color key="backgroundColor" red="0.75497359040000001" green="0.7787802815" blue="0.81490927930000001" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="1" id="SAz-QM-m85"/>
-                                </constraints>
-                            </view>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date added: July 21, 2013" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pXQ-nf-amw">
-                                <rect key="frame" x="20" y="246" width="147" height="15"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                <color key="textColor" red="0.60283035039901733" green="0.63840490579605103" blue="0.68551921844482422" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Don't give up" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dla-fq-3qJ">
-                                <rect key="frame" x="109" y="291" width="103" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="53 days left" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="obG-2W-0d6">
-                                <rect key="frame" x="133" y="320" width="65" height="15"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                <color key="textColor" red="0.60283035039901733" green="0.63840490579605103" blue="0.68551921844482422" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xIT-bX-va2">
-                                <rect key="frame" x="66" y="366" width="189" height="53"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="Back Button">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="goBack:" destination="1Dq-DZ-iYC" eventType="touchUpInside" id="i6k-fE-gX9"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gsw-Tc-gs0">
-                                <rect key="frame" x="278" y="34" width="30" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="bhY-qq-GsY"/>
-                                    <constraint firstAttribute="width" constant="30" id="u2F-Vw-hpY"/>
-                                </constraints>
-                                <state key="normal">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="goBack:" destination="1Dq-DZ-iYC" eventType="touchUpInside" id="M1H-U5-XG4"/>
-                                </connections>
-                            </button>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Lh6-QR-h06" customClass="FLProgressView">
-                                <rect key="frame" x="33" y="343" width="254" height="15"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="15" id="ZI1-Y9-Emr"/>
-                                </constraints>
-                            </view>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Play Icon" translatesAutoresizingMaskIntoConstraints="NO" id="Mg6-Ov-usb">
-                                <rect key="frame" x="134" y="174" width="52" height="52"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="wcy-eE-zzS" firstAttribute="top" secondItem="tvn-aT-cPm" secondAttribute="bottom" constant="55" id="4Ok-Uz-FHk"/>
-                            <constraint firstItem="Dla-fq-3qJ" firstAttribute="top" secondItem="boO-5P-DEr" secondAttribute="bottom" constant="24" id="4dr-WZ-2wR"/>
-                            <constraint firstItem="Lh6-QR-h06" firstAttribute="leading" secondItem="1QH-Wu-Q8V" secondAttribute="leading" constant="33" id="5TB-uR-QhR"/>
-                            <constraint firstItem="8jR-wc-9YE" firstAttribute="centerY" secondItem="GgJ-kB-ISA" secondAttribute="centerY" id="BNu-7X-It0"/>
-                            <constraint firstAttribute="trailing" secondItem="Lh6-QR-h06" secondAttribute="trailing" constant="33" id="BtS-ZV-RdJ"/>
-                            <constraint firstItem="Gsw-Tc-gs0" firstAttribute="centerY" secondItem="mBa-KA-aUG" secondAttribute="centerY" id="CMJ-49-hMh"/>
-                            <constraint firstItem="pXQ-nf-amw" firstAttribute="top" secondItem="vx0-TV-GHe" secondAttribute="bottom" constant="20" id="DMD-8T-jqL"/>
-                            <constraint firstItem="Mg6-Ov-usb" firstAttribute="centerX" secondItem="vx0-TV-GHe" secondAttribute="centerX" id="GIZ-8S-W9x"/>
-                            <constraint firstItem="pXQ-nf-amw" firstAttribute="leading" secondItem="1QH-Wu-Q8V" secondAttribute="leading" constant="20" symbolic="YES" id="IYf-G5-gM0"/>
-                            <constraint firstItem="wcy-eE-zzS" firstAttribute="centerX" secondItem="8jR-wc-9YE" secondAttribute="centerX" constant="-5" id="Jm9-Co-Es9"/>
-                            <constraint firstItem="Gsw-Tc-gs0" firstAttribute="centerX" secondItem="mBa-KA-aUG" secondAttribute="centerX" id="KTT-Lr-ZGU"/>
-                            <constraint firstItem="8jR-wc-9YE" firstAttribute="leading" secondItem="GgJ-kB-ISA" secondAttribute="trailing" constant="2" id="Lc3-js-bxC"/>
-                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="vx0-TV-GHe" secondAttribute="trailing" id="M1J-jg-N33"/>
-                            <constraint firstItem="Lh6-QR-h06" firstAttribute="top" secondItem="obG-2W-0d6" secondAttribute="bottom" constant="8" symbolic="YES" id="Qme-Ub-IX6"/>
-                            <constraint firstAttribute="centerX" secondItem="Lh6-QR-h06" secondAttribute="centerX" id="TLq-4B-863"/>
-                            <constraint firstAttribute="centerX" secondItem="vx0-TV-GHe" secondAttribute="centerX" id="TnP-bS-SC1"/>
-                            <constraint firstItem="vx0-TV-GHe" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="1QH-Wu-Q8V" secondAttribute="leading" id="Udf-lc-GSc"/>
-                            <constraint firstItem="mBa-KA-aUG" firstAttribute="top" secondItem="tvn-aT-cPm" secondAttribute="bottom" constant="18" id="Ulp-zz-jwW"/>
-                            <constraint firstItem="xIT-bX-va2" firstAttribute="top" secondItem="Lh6-QR-h06" secondAttribute="bottom" constant="8" symbolic="YES" id="WGb-bp-azm"/>
-                            <constraint firstItem="8jR-wc-9YE" firstAttribute="top" secondItem="wcy-eE-zzS" secondAttribute="bottom" constant="3" id="WnH-cb-gtS"/>
-                            <constraint firstAttribute="centerX" secondItem="xIT-bX-va2" secondAttribute="centerX" id="dl9-dj-hyN"/>
-                            <constraint firstItem="boO-5P-DEr" firstAttribute="leading" secondItem="1QH-Wu-Q8V" secondAttribute="leading" id="e7B-bN-mjG"/>
-                            <constraint firstItem="boO-5P-DEr" firstAttribute="top" secondItem="pXQ-nf-amw" secondAttribute="bottom" constant="5" id="f1C-93-peL"/>
-                            <constraint firstAttribute="centerX" secondItem="obG-2W-0d6" secondAttribute="centerX" constant="-5.5" id="fXK-ub-aZk"/>
-                            <constraint firstAttribute="trailing" secondItem="mBa-KA-aUG" secondAttribute="trailing" constant="20" id="faa-fv-TGp"/>
-                            <constraint firstAttribute="trailing" secondItem="c16-CO-XKK" secondAttribute="trailing" id="g5Q-gK-x3l"/>
-                            <constraint firstItem="Mg6-Ov-usb" firstAttribute="centerY" secondItem="vx0-TV-GHe" secondAttribute="centerY" id="g63-2H-hey"/>
-                            <constraint firstItem="c16-CO-XKK" firstAttribute="leading" secondItem="1QH-Wu-Q8V" secondAttribute="leading" id="hYd-r0-tFg"/>
-                            <constraint firstAttribute="trailing" secondItem="boO-5P-DEr" secondAttribute="trailing" id="lOd-qZ-Ibe"/>
-                            <constraint firstItem="obG-2W-0d6" firstAttribute="top" secondItem="Dla-fq-3qJ" secondAttribute="bottom" constant="8" id="rhA-Fb-kzj"/>
-                            <constraint firstItem="c16-CO-XKK" firstAttribute="top" secondItem="8jR-wc-9YE" secondAttribute="bottom" constant="26" id="s0y-LW-hsY"/>
-                            <constraint firstAttribute="centerX" secondItem="Dla-fq-3qJ" secondAttribute="centerX" id="sgE-Gz-Twd"/>
-                            <constraint firstItem="vx0-TV-GHe" firstAttribute="top" secondItem="c16-CO-XKK" secondAttribute="bottom" constant="20" id="ySG-Z6-TDq"/>
-                            <constraint firstAttribute="centerX" secondItem="wcy-eE-zzS" secondAttribute="centerX" id="zJD-c4-c42"/>
-                        </constraints>
-                    </view>
-                    <connections>
-                        <outlet property="backButton" destination="xIT-bX-va2" id="XzT-Vq-7sT"/>
-                        <outlet property="daysAgoLabel" destination="GgJ-kB-ISA" id="ev8-za-L1j"/>
-                        <outlet property="daysLeftLabel" destination="obG-2W-0d6" id="sPU-0H-Umm"/>
-                        <outlet property="imageView" destination="vx0-TV-GHe" id="fbh-nJ-Zq8"/>
-                        <outlet property="playButton" destination="Mg6-Ov-usb" id="Zzb-cd-QVr"/>
-                        <outlet property="progressView" destination="Lh6-QR-h06" id="Hu5-AJ-7Jv"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="36T-o0-LWe" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1968" y="584"/>
-        </scene>
         <!--Refuel View Controller-->
         <scene sceneID="zzM-Lh-8bo">
             <objects>
@@ -450,9 +280,6 @@
                                                 <state key="normal" image="X-Out Icon">
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
-                                                <connections>
-                                                    <action selector="goBack:" destination="1Dq-DZ-iYC" eventType="touchUpInside" id="8fX-lC-xih"/>
-                                                </connections>
                                             </button>
                                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Need to refuel?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kfw-wz-F5H">
                                                 <rect key="frame" x="75" y="75" width="170" height="33"/>
@@ -602,14 +429,16 @@
                     </view>
                     <connections>
                         <outlet property="dateAddedLabel" destination="Ig1-c4-XFa" id="GPK-cu-zy6"/>
-                        <outlet property="daysAgoLabel" destination="68k-ag-sqf" id="Rqv-QS-vai"/>
+                        <outlet property="daysAgoLabel" destination="a5z-x9-PnH" id="xW7-BQ-hut"/>
                         <outlet property="daysLeftLabel" destination="4OR-bA-2do" id="PUI-CH-Eom"/>
+                        <outlet property="imageView" destination="agm-Bs-szS" id="q83-Of-beM"/>
                         <outlet property="progressView" destination="1CT-5S-DnZ" id="fwX-IS-dEL"/>
+                        <outlet property="view" destination="n56-QD-V8v" id="3QH-Ui-aHK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="59z-55-Em5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2339" y="584"/>
+            <point key="canvasLocation" x="1968" y="571"/>
         </scene>
         <!--Insipration View Controller - Inspirations-->
         <scene sceneID="V75-eF-6og">

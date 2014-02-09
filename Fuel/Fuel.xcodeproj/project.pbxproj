@@ -23,6 +23,7 @@
 		9D3CB28D18A79CEB00A493F4 /* FLMotivator.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D3CB28C18A79CEB00A493F4 /* FLMotivator.m */; };
 		9D3CB29018A7A96200A493F4 /* FLMotivatorVideo.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D3CB28F18A7A96200A493F4 /* FLMotivatorVideo.m */; };
 		9D3CB29318A7B03400A493F4 /* FLInspirationCameraCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D3CB29218A7B03400A493F4 /* FLInspirationCameraCell.m */; };
+		9D3CB29518A7C78100A493F4 /* RefuelView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9D3CB29418A7C78100A493F4 /* RefuelView.xib */; };
 		9D4FACB818A6B9BF00A49636 /* MainModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9D4FACB618A6B9BF00A49636 /* MainModel.xcdatamodeld */; };
 		9D4FACCD18A6CBC300A49636 /* FLGenericViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D4FACCC18A6CBC300A49636 /* FLGenericViewController.m */; };
 		9D4FACCF18A6CBF600A49636 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D4FACCE18A6CBF600A49636 /* CoreData.framework */; };
@@ -89,6 +90,7 @@
 		9D3CB28F18A7A96200A493F4 /* FLMotivatorVideo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLMotivatorVideo.m; sourceTree = "<group>"; };
 		9D3CB29118A7B03400A493F4 /* FLInspirationCameraCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLInspirationCameraCell.h; sourceTree = "<group>"; };
 		9D3CB29218A7B03400A493F4 /* FLInspirationCameraCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLInspirationCameraCell.m; sourceTree = "<group>"; };
+		9D3CB29418A7C78100A493F4 /* RefuelView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RefuelView.xib; sourceTree = "<group>"; };
 		9D4FACB718A6B9BF00A49636 /* MainModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MainModel.xcdatamodel; sourceTree = "<group>"; };
 		9D4FACCB18A6CBC300A49636 /* FLGenericViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLGenericViewController.h; sourceTree = "<group>"; };
 		9D4FACCC18A6CBC300A49636 /* FLGenericViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLGenericViewController.m; sourceTree = "<group>"; };
@@ -159,6 +161,7 @@
 			children = (
 				9D023E8E18A73B3400A00914 /* FLRefuelViewController.h */,
 				9D023E8F18A73B3400A00914 /* FLRefuelViewController.m */,
+				9D3CB29418A7C78100A493F4 /* RefuelView.xib */,
 			);
 			name = Refuel;
 			sourceTree = "<group>";
@@ -413,6 +416,7 @@
 				9DFECF1918A5DDFC00BD49DC /* Images.xcassets in Resources */,
 				9DFECF0B18A5DDFC00BD49DC /* InfoPlist.strings in Resources */,
 				9DBD922B18A7010E0050F56A /* FLNewChallengeView.xib in Resources */,
+				9D3CB29518A7C78100A493F4 /* RefuelView.xib in Resources */,
 				9DFECF1418A5DDFC00BD49DC /* Main.storyboard in Resources */,
 				9D2DB90D18A715870097917F /* ChallengeDetailView.xib in Resources */,
 			);
