@@ -123,11 +123,13 @@
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     if ([segue.identifier isEqualToString:@"NewChallenge"]) {
-        FLNewChallengeViewController * vc = segue.destinationViewController;
+        UINavigationController* vc = segue.destinationViewController;
         
-        vc.myChallenge = [NSEntityDescription insertNewObjectForEntityForName:@"DTChallenge" inManagedObjectContext:self.managedObjectContext];
+        NSArray *viewControllers = vc.viewControllers;
+        FLNewChallengeViewController * newvc = viewControllers[0];
+        newvc.myChallenge = [NSEntityDescription insertNewObjectForEntityForName:@"FLChallenge" inManagedObjectContext:self.managedObjectContext];
         NSError * error;
-        [self.managedObjectContext save:&error];
+        [self.managedObjectContext save: &error];
     }
 }
 
