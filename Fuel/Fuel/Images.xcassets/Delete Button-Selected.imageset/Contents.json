@@ -3,12 +3,12 @@
     {
       "idiom" : "universal",
       "scale" : "1x",
-      "filename" : "Back Button.png"
+      "filename" : "Delete Button-Selected.png"
     },
     {
       "idiom" : "universal",
       "scale" : "2x",
-      "filename" : "Back Button@2x.png"
+      "filename" : "Delete Button-Selected@2x.png"
     }
   ],
   "info" : {
