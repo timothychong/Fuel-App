@@ -23,4 +23,12 @@
     return [NSString stringWithFormat:@"%d days left", (int) (interval / 60 / 60 / 24)];
 }
 
+
+-(CGFloat)percentFinished
+{
+    NSTimeInterval entireInterval = [self.endDate timeIntervalSinceDate:self.startDate];
+    NSTimeInterval partialInterval = [[NSDate new] timeIntervalSinceDate: self.startDate];
+    
+    return partialInterval / entireInterval;
+}
 @end

@@ -7,10 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <LDProgressView/LDProgressView.h>
 
 @interface FLChallengeCell : UITableViewCell
 
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UILabel *dayLeftLabel;
+@property (weak, nonatomic) IBOutlet LDProgressView *progressView;
 
 @end

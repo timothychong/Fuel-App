@@ -16,5 +16,6 @@
 @interface  FLChallenge(FLDataModelCategory)
 
 -(NSString *) dayLeftString;
+-(CGFloat) percentFinished;
 
 @end

@@ -27,8 +27,7 @@
     
     
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-    self.tableView.backgroundColor = [UIColor colorWithHue:0 saturation:0 brightness:96 alpha:1];
-    
+    self.tableView.backgroundColor = [UIColor colorWithRed:244/255.0 green:244/255.0 blue:244/255.0 alpha:1];
     
     NSError *error = nil;
     
@@ -172,6 +171,7 @@
     FLChallenge * challenge = [self.fetchedResultsController objectAtIndexPath:indexPath];
     cell.titleLabel.text = challenge.title;
     cell.dayLeftLabel.text = challenge.dayLeftString;
+    cell.progressView.progress = [challenge percentFinished];
 }
 
 

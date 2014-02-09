@@ -6,6 +6,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FLDetailChallengeViewController">
             <connections>
+                <outlet property="numberLabel" destination="kSN-bv-vfH" id="XTe-NI-OHi"/>
                 <outlet property="refuelButton" destination="A7K-z2-Bgj" id="TdM-F1-xRv"/>
                 <outlet property="timeLeftLabel" destination="ZL8-oR-mG2" id="RQJ-yl-0Vl"/>
                 <outlet property="titleLabel" destination="J9O-HV-X8h" id="vp8-Gc-f8v"/>
