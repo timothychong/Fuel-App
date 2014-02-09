@@ -12,6 +12,7 @@
 #import "FLMotivatorVideo.h"
 
 @interface FLRefuelViewController ()
+@property (nonatomic) FLMotivator * myMotivator;
 
 @end
 
@@ -41,8 +42,16 @@
     }
     
     int r = arc4random() % count;
-    FLMotivator * motivator = array[r];
+    self.myMotivator = array[r];
     
+    self.progressView.progress = [self.myChallenge percentFinished];
+    self.daysLeftLabel.text = [self.myChallenge dayLeftString];
+    
+    //Days ago
+    NSDate * dateAdded = self.myMotivator.dateAdded;
+    NSTimeInterval difference = [[NSDate new] timeIntervalSinceDate:dateAdded];
+    int days = difference / 60 / 24 / 60;
+    self.daysAgoLabel.text = [NSString stringWithFormat:@"%d", days];
 }
 
 - (void)didReceiveMemoryWarning
