@@ -66,6 +66,11 @@
     [actionSheet showInView:self.view];
 }
 
+- (IBAction)showInspiration:(id)sender {
+    
+    
+}
+
 #pragma mark - UIActionSheetDelegate
 
 -(void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex

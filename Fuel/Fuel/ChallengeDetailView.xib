@@ -111,19 +111,32 @@
                         <constraint firstAttribute="height" constant="1" id="tOq-Tk-Dq4"/>
                     </constraints>
                 </view>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6ma-Gy-2tN">
-                    <rect key="frame" x="254" y="208" width="46" height="30"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6ma-Gy-2tN">
+                    <rect key="frame" x="280" y="213" width="13" height="23"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" image="Right Arrow Icon">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Gw-gt-wM1">
+                    <rect key="frame" x="0.0" y="200" width="320" height="48"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <state key="normal">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
+                    <connections>
+                        <action selector="showInspiration:" destination="-1" eventType="touchUpInside" id="EMQ-Wi-DR6"/>
+                    </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
+                <constraint firstItem="1Gw-gt-wM1" firstAttribute="top" secondItem="LQH-Qc-eey" secondAttribute="bottom" id="135-3u-o2I"/>
+                <constraint firstAttribute="trailing" secondItem="1Gw-gt-wM1" secondAttribute="trailing" id="4oP-5V-jrW"/>
                 <constraint firstItem="Vtd-T4-hJn" firstAttribute="top" secondItem="7fs-KI-aNf" secondAttribute="bottom" constant="22" id="7Sd-su-r7Z"/>
                 <constraint firstItem="Vtd-T4-hJn" firstAttribute="leading" secondItem="1rc-1h-TWz" secondAttribute="leading" id="7h8-rU-hnS"/>
                 <constraint firstAttribute="centerX" secondItem="8HE-AT-sca" secondAttribute="centerX" id="CQR-s3-H60"/>
+                <constraint firstAttribute="trailing" secondItem="6ma-Gy-2tN" secondAttribute="trailing" constant="27" id="EwZ-F6-CWD"/>
                 <constraint firstItem="UUw-Km-JRE" firstAttribute="top" secondItem="7fs-KI-aNf" secondAttribute="bottom" constant="12" id="GmO-i2-MKj"/>
                 <constraint firstAttribute="trailing" secondItem="LQH-Qc-eey" secondAttribute="trailing" id="KyS-ac-rSp"/>
                 <constraint firstAttribute="trailing" secondItem="aU3-Xv-UZP" secondAttribute="trailing" constant="45" id="LKD-1F-jPA"/>
@@ -133,11 +146,13 @@
                 <constraint firstItem="ztQ-mW-FT8" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="Ttp-WU-7gc"/>
                 <constraint firstItem="7fs-KI-aNf" firstAttribute="leading" secondItem="Vtd-T4-hJn" secondAttribute="leading" id="UDM-5L-oFE"/>
                 <constraint firstAttribute="centerX" secondItem="A7K-z2-Bgj" secondAttribute="centerX" id="aAL-8Q-xeN"/>
+                <constraint firstItem="UUw-Km-JRE" firstAttribute="top" secondItem="1Gw-gt-wM1" secondAttribute="bottom" id="aHR-8F-PHT"/>
                 <constraint firstAttribute="trailing" secondItem="UUw-Km-JRE" secondAttribute="trailing" id="aIW-iO-VBQ"/>
                 <constraint firstItem="ZL8-oR-mG2" firstAttribute="top" secondItem="aU3-Xv-UZP" secondAttribute="bottom" constant="21" id="bby-Dr-O7A"/>
                 <constraint firstItem="qw6-Uc-xuw" firstAttribute="centerY" secondItem="7fs-KI-aNf" secondAttribute="centerY" id="eno-hZ-o27"/>
                 <constraint firstItem="7fs-KI-aNf" firstAttribute="top" secondItem="LQH-Qc-eey" secondAttribute="bottom" constant="12" id="foN-jB-vRt"/>
                 <constraint firstItem="7fs-KI-aNf" firstAttribute="leading" secondItem="1" secondAttribute="leading" constant="45" id="g6u-0f-nQx"/>
+                <constraint firstItem="1Gw-gt-wM1" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="gUs-Yb-8o4"/>
                 <constraint firstItem="aU3-Xv-UZP" firstAttribute="leading" secondItem="1" secondAttribute="leading" constant="45" id="hKP-Zq-hJr"/>
                 <constraint firstAttribute="trailing" secondItem="ztQ-mW-FT8" secondAttribute="trailing" id="hLC-dL-hlQ"/>
                 <constraint firstItem="8HE-AT-sca" firstAttribute="top" secondItem="A7K-z2-Bgj" secondAttribute="bottom" constant="15" id="iDT-Cj-X4V"/>
@@ -148,6 +163,7 @@
                 <constraint firstItem="LQH-Qc-eey" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="olm-7g-bxd"/>
                 <constraint firstItem="qw6-Uc-xuw" firstAttribute="leading" secondItem="7fs-KI-aNf" secondAttribute="trailing" constant="5" id="pUJ-us-U5h"/>
                 <constraint firstItem="7fs-KI-aNf" firstAttribute="top" secondItem="ZL8-oR-mG2" secondAttribute="bottom" constant="22" id="pmo-r2-WJq"/>
+                <constraint firstItem="qw6-Uc-xuw" firstAttribute="centerY" secondItem="6ma-Gy-2tN" secondAttribute="centerY" id="qp2-KJ-LW4"/>
                 <constraint firstItem="qw6-Uc-xuw" firstAttribute="centerX" secondItem="kSN-bv-vfH" secondAttribute="centerX" id="vTW-eI-r0F"/>
                 <constraint firstItem="UUw-Km-JRE" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="zGa-dH-6rc"/>
                 <constraint firstItem="qw6-Uc-xuw" firstAttribute="centerY" secondItem="kSN-bv-vfH" secondAttribute="centerY" id="zZ5-nz-vKp"/>
@@ -162,5 +178,6 @@
         <image name="Goals_Pattern_BG" width="320" height="145"/>
         <image name="Inspiration_Num_Circle" width="31" height="32"/>
         <image name="Refuel Me" width="189" height="53"/>
+        <image name="Right Arrow Icon" width="13" height="23"/>
     </resources>
 </document>

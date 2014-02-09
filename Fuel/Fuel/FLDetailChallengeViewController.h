@@ -22,5 +22,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *numberLabel;
 - (IBAction)refuel:(id)sender;
 - (IBAction)removeFuel:(id)sender;
+- (IBAction)showInspiration:(id)sender;
 
 @end
