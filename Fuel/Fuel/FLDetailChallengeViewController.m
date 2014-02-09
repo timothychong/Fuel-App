@@ -27,6 +27,12 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    
+    UIView * view = [[NSBundle mainBundle] loadNibNamed:@"FLNewChallengeView" owner:self options:nil][0];
+    [self.scrollView addSubview:view];
+    self.scrollView.contentSize = view.frame.size;
+    self.scrollView.scrollEnabled = YES;
+
 }
 
 - (void)didReceiveMemoryWarning
