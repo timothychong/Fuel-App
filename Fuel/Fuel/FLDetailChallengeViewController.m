@@ -31,11 +31,11 @@
     UIView * view = [[NSBundle mainBundle] loadNibNamed:@"ChallengeDetailView" owner:self options:nil][0];
     [self.scrollView addSubview:view];
     self.scrollView.contentSize = view.frame.size;
-    self.scrollView.scrollEnabled = YES;
+    self.scrollView.scrollEnabled = NO;
 
     self.titleLabel.text = self.myChallenge.title;
     self.timeLeftLabel.text = [self.myChallenge dayLeftString];
-    
+    [self.refuelButton setImage:[UIImage imageNamed:@"Refuel Me - Selected"] forState:UIControlStateHighlighted];
     
 }
 
@@ -46,5 +46,7 @@
 }
 
 - (IBAction)refuel:(id)sender {
+    
+    
 }
 @end
