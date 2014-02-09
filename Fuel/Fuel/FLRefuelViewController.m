@@ -14,6 +14,7 @@
 
 @interface FLRefuelViewController ()
 @property (nonatomic) FLMotivator * myMotivator;
+@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 
 @end
 
@@ -32,8 +33,12 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-    
+    UIView * view = [[NSBundle mainBundle]loadNibNamed:@"RefuelView" owner:self options:nil][0];
+    [self.scrollView addSubview: view];
+    NSLog(@"%@", NSStringFromCGSize(self.scrollView.contentSize));
     [self.backButton setImage:[UIImage imageNamed:@"Back Button - Selected"] forState: UIControlStateHighlighted];
+    self.scrollView.contentSize = view.frame.size;
+    self.scrollView.scrollEnabled = YES;
     
     NSArray * array = [self.myChallenge.motivators allObjects];
     int count = array.count;
@@ -62,10 +67,8 @@
         case FLMotivatorTypeImage:{
             self.imageView.image = [[FLGlobalHelper imageWithPath:((FLMotivatorImage *)self.myMotivator).path] resizedImage:CGSizeMake(300, 300) interpolationQuality:0];
             self.playButton.alpha = 0;
-            UIScrollView * sv = ((UIScrollView *) self.view);
-            sv.scrollEnabled = YES;
-            sv.contentSize = ((UIView*)sv.subviews[0]).frame.size;
-        }
+            
+            }
             break;
         case FLMotivatorTypeVideo:
             break;
