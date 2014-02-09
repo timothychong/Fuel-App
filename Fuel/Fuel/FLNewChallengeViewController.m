@@ -16,9 +16,31 @@
 
 @interface FLNewChallengeViewController () <UINavigationControllerDelegate, UIImagePickerControllerDelegate, UIAlertViewDelegate>
 
+@property (weak, nonatomic) IBOutlet UITextField *goalName;
+@property (weak, nonatomic) IBOutlet UIDatePicker *date;
+
 @end
 
 @implementation FLNewChallengeViewController
+
+- (IBAction)saveChallenge
+{
+    if (![self.goalName.text isEqualToString: @""] && self.date.date)
+    {
+        self.myChallenge.title = self.goalName.text;
+        self.myChallenge.endDate = self.date.date;
+        self.myChallenge.startDate = [NSDate date];
+        NSError * error;
+        [self.managedObjectContext save: &error];
+        [self dismissViewControllerAnimated:YES completion:nil];
+    }
+    else
+    {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error" message: @"There is an incomplete field!" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+        [alert show];
+    }
+}
+
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -49,7 +71,7 @@
 
 - (IBAction)addText
 {
-    UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Get Fuel"
+    UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Your Message"
                                                       message: nil
                                                      delegate: self
                                             cancelButtonTitle: @"Cancel"
