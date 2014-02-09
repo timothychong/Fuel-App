@@ -12,6 +12,4 @@
 @interface FLCurrentChallengeViewController : FLGenericViewController <UITableViewDataSource, UITableViewDelegate, NSFetchedResultsControllerDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
-
-
 @end

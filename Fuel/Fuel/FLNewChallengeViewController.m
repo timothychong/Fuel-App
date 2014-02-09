@@ -233,4 +233,8 @@
     [self.managedObjectContext save:&error];
     [self dismissViewControllerAnimated:YES completion:nil];
 }
+
+- (IBAction)textfieldSelected:(id)sender {
+    [self.goalNameTextField becomeFirstResponder];
+}
 @end

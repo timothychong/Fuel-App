@@ -17,6 +17,8 @@
 		1790D28418A7129300D084E4 /* FLMotivatorImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 1790D28318A7129300D084E4 /* FLMotivatorImage.m */; };
 		1790D28718A7129300D084E4 /* FLMotivatorText.m in Sources */ = {isa = PBXBuildFile; fileRef = 1790D28618A7129300D084E4 /* FLMotivatorText.m */; };
 		1790D28A18A7129300D084E4 /* FLChallenge.m in Sources */ = {isa = PBXBuildFile; fileRef = 1790D28918A7129300D084E4 /* FLChallenge.m */; };
+		9D2DB90A18A7135B0097917F /* FLDetailChallengeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D2DB90918A7135B0097917F /* FLDetailChallengeViewController.m */; };
+		9D2DB90D18A715870097917F /* ChallengeDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9D2DB90C18A715870097917F /* ChallengeDetailView.xib */; };
 		9D4FACB818A6B9BF00A49636 /* MainModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9D4FACB618A6B9BF00A49636 /* MainModel.xcdatamodeld */; };
 		9D4FACCD18A6CBC300A49636 /* FLGenericViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D4FACCC18A6CBC300A49636 /* FLGenericViewController.m */; };
 		9D4FACCF18A6CBF600A49636 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D4FACCE18A6CBF600A49636 /* CoreData.framework */; };
@@ -72,6 +74,9 @@
 		1790D28818A7129300D084E4 /* FLChallenge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLChallenge.h; sourceTree = "<group>"; };
 		1790D28918A7129300D084E4 /* FLChallenge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLChallenge.m; sourceTree = "<group>"; };
 		60A683BC8AC34A84AEB55D57 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		9D2DB90818A7135B0097917F /* FLDetailChallengeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLDetailChallengeViewController.h; sourceTree = "<group>"; };
+		9D2DB90918A7135B0097917F /* FLDetailChallengeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLDetailChallengeViewController.m; sourceTree = "<group>"; };
+		9D2DB90C18A715870097917F /* ChallengeDetailView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChallengeDetailView.xib; sourceTree = "<group>"; };
 		9D4FACB718A6B9BF00A49636 /* MainModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MainModel.xcdatamodel; sourceTree = "<group>"; };
 		9D4FACCB18A6CBC300A49636 /* FLGenericViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLGenericViewController.h; sourceTree = "<group>"; };
 		9D4FACCC18A6CBC300A49636 /* FLGenericViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLGenericViewController.m; sourceTree = "<group>"; };
@@ -137,6 +142,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9D2DB90B18A713610097917F /* Detail Challenge */ = {
+			isa = PBXGroup;
+			children = (
+				9D2DB90818A7135B0097917F /* FLDetailChallengeViewController.h */,
+				9D2DB90918A7135B0097917F /* FLDetailChallengeViewController.m */,
+				9D2DB90C18A715870097917F /* ChallengeDetailView.xib */,
+			);
+			name = "Detail Challenge";
+			sourceTree = "<group>";
+		};
 		9D4FACB518A6B95E00A49636 /* Data Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -236,6 +251,7 @@
 				9D4FACCC18A6CBC300A49636 /* FLGenericViewController.m */,
 				9DFECF1218A5DDFC00BD49DC /* Main.storyboard */,
 				9DBD922618A700D60050F56A /* New Challenge */,
+				9D2DB90B18A713610097917F /* Detail Challenge */,
 				9D4FACD918A6F58D00A49636 /* Current Challenge */,
 				9D4FACD218A6E83300A49636 /* Back end */,
 				9D4FACB518A6B95E00A49636 /* Data Model */,
@@ -326,7 +342,7 @@
 				ORGANIZATIONNAME = Fuel;
 				TargetAttributes = {
 					9DFECEFC18A5DDFC00BD49DC = {
-						DevelopmentTeam = 9E93B2WE53;
+						DevelopmentTeam = M6HLH3KVN2;
 					};
 					9DFECF1D18A5DDFC00BD49DC = {
 						TestTargetID = 9DFECEFC18A5DDFC00BD49DC;
@@ -362,6 +378,7 @@
 				9DFECF0B18A5DDFC00BD49DC /* InfoPlist.strings in Resources */,
 				9DBD922B18A7010E0050F56A /* FLNewChallengeView.xib in Resources */,
 				9DFECF1418A5DDFC00BD49DC /* Main.storyboard in Resources */,
+				9D2DB90D18A715870097917F /* ChallengeDetailView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -419,6 +436,7 @@
 				9DBD922918A700F30050F56A /* FLNewChallengeViewController.m in Sources */,
 				9D4FACDC18A6F5B000A49636 /* FLChallengeCell.m in Sources */,
 				1790D28118A7129300D084E4 /* FLChallengeUpdate.m in Sources */,
+				9D2DB90A18A7135B0097917F /* FLDetailChallengeViewController.m in Sources */,
 				1790D28418A7129300D084E4 /* FLMotivatorImage.m in Sources */,
 				1790D28718A7129300D084E4 /* FLMotivatorText.m in Sources */,
 				9DFECF1118A5DDFC00BD49DC /* FLAppDelegate.m in Sources */,

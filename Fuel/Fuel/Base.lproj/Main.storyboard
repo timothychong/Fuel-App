@@ -124,11 +124,12 @@
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="0ST-Cr-ieu" id="Rzz-eF-CPx"/>
+                        <segue destination="hhq-Qy-NsE" kind="push" identifier="DetailSegue" id="ES6-2e-cWw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="895" y="142"/>
+            <point key="canvasLocation" x="886" y="123"/>
         </scene>
         <!--Create Fuel View Controller-->
         <scene sceneID="9sE-cE-0Q5">
@@ -203,6 +204,34 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jjc-AB-dXr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="875" y="807"/>
+        </scene>
+        <!--Detail Challenge View Controller - Challenge-->
+        <scene sceneID="oeV-qL-rAb">
+            <objects>
+                <viewController storyboardIdentifier="ChallengeDetailView" id="hhq-Qy-NsE" customClass="FLDetailChallengeViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="iTQ-vK-gEq"/>
+                        <viewControllerLayoutGuide type="bottom" id="D9m-tj-si4"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="NaZ-gC-1c8">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FLL-JM-r4J">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Challenge" id="fCg-of-ASM"/>
+                    <connections>
+                        <outlet property="scrollView" destination="FLL-JM-r4J" id="bat-rX-MIg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="B3P-jN-Ycb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1452" y="584"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="nU5-Ca-P2o">
