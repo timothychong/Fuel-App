@@ -18,5 +18,7 @@
 + (FLGlobalHelper *)defaultHelper;
 - (void) defaultSetup;
 - (void) deleteAllChallenges;
+-(UIImage *) imageWithPath:(NSString *) str;
+
 
 @end

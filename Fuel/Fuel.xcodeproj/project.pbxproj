@@ -17,6 +17,7 @@
 		1790D28418A7129300D084E4 /* FLMotivatorImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 1790D28318A7129300D084E4 /* FLMotivatorImage.m */; };
 		1790D28718A7129300D084E4 /* FLMotivatorText.m in Sources */ = {isa = PBXBuildFile; fileRef = 1790D28618A7129300D084E4 /* FLMotivatorText.m */; };
 		1790D28A18A7129300D084E4 /* FLChallenge.m in Sources */ = {isa = PBXBuildFile; fileRef = 1790D28918A7129300D084E4 /* FLChallenge.m */; };
+		9D023E9018A73B3400A00914 /* FLRefuelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D023E8F18A73B3400A00914 /* FLRefuelViewController.m */; };
 		9D2DB90A18A7135B0097917F /* FLDetailChallengeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D2DB90918A7135B0097917F /* FLDetailChallengeViewController.m */; };
 		9D2DB90D18A715870097917F /* ChallengeDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9D2DB90C18A715870097917F /* ChallengeDetailView.xib */; };
 		9D4FACB818A6B9BF00A49636 /* MainModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9D4FACB618A6B9BF00A49636 /* MainModel.xcdatamodeld */; };
@@ -74,6 +75,8 @@
 		1790D28818A7129300D084E4 /* FLChallenge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLChallenge.h; sourceTree = "<group>"; };
 		1790D28918A7129300D084E4 /* FLChallenge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLChallenge.m; sourceTree = "<group>"; };
 		60A683BC8AC34A84AEB55D57 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		9D023E8E18A73B3400A00914 /* FLRefuelViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLRefuelViewController.h; sourceTree = "<group>"; };
+		9D023E8F18A73B3400A00914 /* FLRefuelViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLRefuelViewController.m; sourceTree = "<group>"; };
 		9D2DB90818A7135B0097917F /* FLDetailChallengeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLDetailChallengeViewController.h; sourceTree = "<group>"; };
 		9D2DB90918A7135B0097917F /* FLDetailChallengeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLDetailChallengeViewController.m; sourceTree = "<group>"; };
 		9D2DB90C18A715870097917F /* ChallengeDetailView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChallengeDetailView.xib; sourceTree = "<group>"; };
@@ -142,6 +145,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9D023E8D18A73AFA00A00914 /* Refuel */ = {
+			isa = PBXGroup;
+			children = (
+				9D023E8E18A73B3400A00914 /* FLRefuelViewController.h */,
+				9D023E8F18A73B3400A00914 /* FLRefuelViewController.m */,
+			);
+			name = Refuel;
+			sourceTree = "<group>";
+		};
 		9D2DB90B18A713610097917F /* Detail Challenge */ = {
 			isa = PBXGroup;
 			children = (
@@ -252,6 +264,7 @@
 				9DFECF1218A5DDFC00BD49DC /* Main.storyboard */,
 				9DBD922618A700D60050F56A /* New Challenge */,
 				9D2DB90B18A713610097917F /* Detail Challenge */,
+				9D023E8D18A73AFA00A00914 /* Refuel */,
 				9D4FACD918A6F58D00A49636 /* Current Challenge */,
 				9D4FACD218A6E83300A49636 /* Back end */,
 				9D4FACB518A6B95E00A49636 /* Data Model */,
@@ -445,6 +458,7 @@
 				1790D27B18A7129200D084E4 /* FLMotivatorVideo.m in Sources */,
 				9DFECF0D18A5DDFC00BD49DC /* main.m in Sources */,
 				1790D28A18A7129300D084E4 /* FLChallenge.m in Sources */,
+				9D023E9018A73B3400A00914 /* FLRefuelViewController.m in Sources */,
 				9DFECF1718A5DDFC00BD49DC /* FLCurrentChallengeViewController.m in Sources */,
 				1790D27E18A7129200D084E4 /* FLMotivator.m in Sources */,
 			);

@@ -40,6 +40,13 @@
  
 }
 
+-(void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+
+    
+}
+
 
 - (void)didReceiveMemoryWarning
 {
@@ -170,7 +177,8 @@
 
 - (void)controllerDidChangeContent:(NSFetchedResultsController *)controller {
     // The fetch controller has sent all current change notifications, so tell the table view to process all updates.
-    [self.tableView endUpdates];
+        [self.tableView endUpdates];
+    
 }
 
 #pragma mark - UITableViewDelegate
@@ -190,8 +198,8 @@
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     if ([segue.identifier isEqualToString:@"NewChallenge"]) {
-        UINavigationController* vc = segue.destinationViewController;
         
+        UINavigationController* vc = segue.destinationViewController;
         NSArray *viewControllers = vc.viewControllers;
         FLNewChallengeViewController * newvc = viewControllers[0];
         newvc.myChallenge = [NSEntityDescription insertNewObjectForEntityForName:@"FLChallenge" inManagedObjectContext:self.managedObjectContext];
