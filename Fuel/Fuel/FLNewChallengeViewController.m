@@ -71,7 +71,7 @@
 
 - (IBAction)addText
 {
-    UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Get Fuel"
+    UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Your Message"
                                                       message: nil
                                                      delegate: self
                                             cancelButtonTitle: @"Cancel"
