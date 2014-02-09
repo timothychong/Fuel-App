@@ -14,11 +14,32 @@
 #import "FLMotivatorImage.h"
 #import "FLMotivatorText.h"
 
-@interface FLNewChallengeViewController () <UINavigationControllerDelegate, UIImagePickerControllerDelegate>
+@interface FLNewChallengeViewController () <UINavigationControllerDelegate, UIImagePickerControllerDelegate, UIAlertViewDelegate>
+
+@property (weak, nonatomic) IBOutlet UITextField *goalName;
+@property (weak, nonatomic) IBOutlet UIDatePicker *date;
 
 @end
 
 @implementation FLNewChallengeViewController
+
+- (IBAction)saveChallenge
+{
+    if (self.goalName.text && self.date.date)
+    {
+        self.myChallenge.title = self.goalName.text;
+        self.myChallenge.endDate = self.date.date;
+        self.myChallenge.startDate = [NSDate date];
+        NSError * error;
+        [self.managedObjectContext save: &error];
+    }
+    else
+    {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error" message: @"There is an incomplete field!" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+        [alert show];
+    }
+}
+
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -49,9 +70,27 @@
 
 - (IBAction)addText
 {
-    
+    UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Get Fuel"
+                                                      message: nil
+                                                     delegate: self
+                                            cancelButtonTitle: @"Cancel"
+                                            otherButtonTitles: @"Refuel", nil];
+    message.alertViewStyle = UIAlertViewStylePlainTextInput;
+    [message show];
 }
 
+- (void) alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    if (!(buttonIndex == 0))
+    {
+        UITextField *textfield =  [alertView textFieldAtIndex: 0];
+        NSString * text =  textfield.text;
+        
+        FLMotivatorText * newText = [NSEntityDescription insertNewObjectForEntityForName: @"FLMotivatorText" inManagedObjectContext:self.managedObjectContext];
+        newText.text = text;
+        [self.myChallenge addMotivatorsObject: newText];
+    }
+}
 - (IBAction)addVideo
 {
     [self startCameraControllerFromViewController:self usingDelegate:self];
