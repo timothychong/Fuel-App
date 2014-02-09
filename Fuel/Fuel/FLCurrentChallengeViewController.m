@@ -177,13 +177,10 @@
 
 -(void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    
-    
-    
     UIStoryboard * st = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
     
     FLDetailChallengeViewController * dvc = [st instantiateViewControllerWithIdentifier:@"ChallengeDetailView"];
-
+    dvc.myChallenge = [self.fetchedResultsController objectAtIndexPath:indexPath];
     [self.navigationController pushViewController:dvc animated:YES];
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
