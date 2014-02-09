@@ -2,7 +2,7 @@
 //  FLChallenge.m
 //  Fuel
 //
-//  Created by Timothy Chong on 2/8/14.
+//  Created by Akshar Bonu on 2/8/14.
 //  Copyright (c) 2014 Fuel. All rights reserved.
 //
 
@@ -13,10 +13,10 @@
 
 @implementation FLChallenge
 
-@dynamic title;
-@dynamic startDate;
 @dynamic endDate;
-@dynamic updates;
+@dynamic startDate;
+@dynamic title;
 @dynamic motivators;
+@dynamic updates;
 
 @end
