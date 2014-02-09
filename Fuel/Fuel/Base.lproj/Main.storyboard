@@ -208,7 +208,7 @@
         <!--Detail Challenge View Controller - Challenge-->
         <scene sceneID="oeV-qL-rAb">
             <objects>
-                <viewController storyboardIdentifier="DetailChallengeViewController" id="hhq-Qy-NsE" customClass="FLDetailChallengeViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ChallengeDetailView" id="hhq-Qy-NsE" customClass="FLDetailChallengeViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="iTQ-vK-gEq"/>
                         <viewControllerLayoutGuide type="bottom" id="D9m-tj-si4"/>
