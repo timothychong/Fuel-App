@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface FLNewChallengeViewController : UIViewController
+@interface FLNewChallengeViewController : UIViewController <UITextFieldDelegate>
+@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 
 @end

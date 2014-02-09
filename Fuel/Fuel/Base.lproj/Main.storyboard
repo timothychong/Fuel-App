@@ -4,10 +4,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
     </dependencies>
     <scenes>
-        <!--View Controller - New Challenge-->
+        <!--New Challenge View Controller - New Challenge-->
         <scene sceneID="UZl-DA-xJQ">
             <objects>
-                <viewController id="ieT-bn-Qnd" sceneMemberID="viewController">
+                <viewController id="ieT-bn-Qnd" customClass="FLNewChallengeViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="V0k-en-w3X"/>
                         <viewControllerLayoutGuide type="bottom" id="wzB-GE-Ns0"/>
@@ -24,6 +24,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="New Challenge" id="OTx-V3-7lp"/>
+                    <connections>
+                        <outlet property="scrollView" destination="je6-cs-sWO" id="M7M-yc-DIJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lbz-xY-unU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

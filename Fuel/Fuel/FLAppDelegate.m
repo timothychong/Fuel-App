@@ -24,6 +24,8 @@
     [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
     [[UINavigationBar appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
 
+    [[UINavigationBar appearance] setBackgroundImage:[UIImage imageNamed:@"Navigation_TopMenuBar"] forBarMetrics:UIBarMetricsDefault];
+
     
     return YES;
 }

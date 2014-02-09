@@ -36,7 +36,6 @@
         abort();
     }
     
-    [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"Navigation_TopMenuBar"] forBarMetrics:UIBarMetricsDefault];
 }
 
 - (void)didReceiveMemoryWarning
