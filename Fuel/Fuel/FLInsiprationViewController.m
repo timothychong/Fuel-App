@@ -165,7 +165,6 @@
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString * cameraIdentifier = @"InspirationCameraCell";
     static NSString * textIdentifier = @"InspirationTextCell";
     
     FLMotivator * motivator = [self.fetchedResultsController objectAtIndexPath:indexPath];
@@ -175,7 +174,7 @@
     switch (motivator.type) {
         case FLMotivatorTypeImage:
         case FLMotivatorTypeVideo:
-            cell = [tableView dequeueReusableCellWithIdentifier:cameraIdentifier];
+            return 350;
             break;
         case FLMotivatorTypeText:
             cell = [tableView dequeueReusableCellWithIdentifier:textIdentifier];

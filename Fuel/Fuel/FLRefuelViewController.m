@@ -11,6 +11,7 @@
 #import "FLMotivatorText.h"
 #import "FLMotivatorVideo.h"
 #import <UIImage-Categories/UIImage+Resize.h>
+#import <Masonry/Masonry.h>
 
 @interface FLRefuelViewController ()
 @property (nonatomic) FLMotivator * myMotivator;
@@ -62,6 +63,11 @@
     
     switch ([self.myMotivator type]) {
         case FLMotivatorTypeText:
+        {
+            UILabel * label = [[UILabel alloc]init];
+            [view addSubview:label];
+            
+        }
             
             break;
         case FLMotivatorTypeImage:{
@@ -70,7 +76,14 @@
             
             }
             break;
-        case FLMotivatorTypeVideo:
+        case FLMotivatorTypeVideo:{
+            self.imageView.image = [UIImage imageNamed:@"Video Placeholder"];
+            self.playButton.alpha = YES;
+            [self.playButton addGestureRecognizer:[[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(playVideo:)]];
+            [self.imageView addGestureRecognizer:[[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(playVideo:)]];
+            self.playButton.userInteractionEnabled = YES;
+            self.imageView.userInteractionEnabled = YES;
+        }
             break;
         default:
             break;
@@ -86,5 +99,9 @@
 
 - (IBAction)goBack:(id)sender {
     [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+-(IBAction)playVideo:(id)sender{
+    [self presentVideoWithPath:((FLMotivatorVideo *)self.myMotivator).path];
 }
 @end

@@ -17,4 +17,6 @@
     #import "FLDataModelCategory.h"
 #import <NSDate+Calendar/NSDate+Calendar.h>
 #import "FLGlobalHelper.h"
+#define MAS_SHORTHAND
+#import "Masonry.h"
 #endif

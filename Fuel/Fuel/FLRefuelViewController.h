@@ -9,8 +9,9 @@
 #import <UIKit/UIKit.h>
 #import "FLChallenge.h"
 #import "FLProgressView.h"
+#import "FLGenericViewController.h"
 
-@interface FLRefuelViewController : UIViewController
+@interface FLRefuelViewController : FLGenericViewController
 - (IBAction)goBack:(id)sender;
 @property (weak, nonatomic) IBOutlet UIButton *backButton;
 @property (weak, nonatomic) IBOutlet UILabel *daysAgoLabel;
