@@ -10,6 +10,7 @@
 #import "FLAppDelegate.h"
 #import "FLChallengeCell.h"
 #import "FLNewChallengeViewController.h"
+#import "FLDetailChallengeViewController.h"
 
 #define CELL_HEIGHT 110
 
@@ -118,6 +119,12 @@
 {
     
     
+    
+    UIStoryboard * st = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    
+    FLDetailChallengeViewController * dvc = [st instantiateViewControllerWithIdentifier:@"ChallengeDetailView"];
+
+    [self.navigationController pushViewController:dvc animated:YES];
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
