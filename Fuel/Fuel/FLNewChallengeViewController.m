@@ -14,7 +14,7 @@
 #import "FLMotivatorImage.h"
 #import "FLMotivatorText.h"
 
-@interface FLNewChallengeViewController () <UINavigationControllerDelegate, UIImagePickerControllerDelegate>
+@interface FLNewChallengeViewController () <UINavigationControllerDelegate, UIImagePickerControllerDelegate, UIAlertViewDelegate>
 
 @end
 
@@ -49,9 +49,27 @@
 
 - (IBAction)addText
 {
-    
+    UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Get Fuel"
+                                                      message: nil
+                                                     delegate: self
+                                            cancelButtonTitle: @"Cancel"
+                                            otherButtonTitles: @"Refuel", nil];
+    message.alertViewStyle = UIAlertViewStylePlainTextInput;
+    [message show];
 }
 
+- (void) alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    if (!(buttonIndex == 0))
+    {
+        UITextField *textfield =  [alertView textFieldAtIndex: 0];
+        NSString * text =  textfield.text;
+        
+        FLMotivatorText * newText = [NSEntityDescription insertNewObjectForEntityForName: @"FLMotivatorText" inManagedObjectContext:self.managedObjectContext];
+        newText.text = text;
+        [self.myChallenge addMotivatorsObject: newText];
+    }
+}
 - (IBAction)addVideo
 {
     [self startCameraControllerFromViewController:self usingDelegate:self];
