@@ -1,4 +1,4 @@
-Fuel-App @ HackBeanpot 2014
+Fuel-iOS App @ HackBeanpot 2014
 ========
 
 
